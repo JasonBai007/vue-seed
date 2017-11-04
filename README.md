@@ -45,7 +45,6 @@ yarn run release
 * Yarn
 
 ## Useful Links
-* [产品需求](http://192.168.56.81:8888/Design%20Document/Auto%20OP/Auto%20OP-V1.0.0/Auto-OP-V1.0.0-Publish/#g=1&p=项目信息)
 * [饿了么组件](http://element.eleme.io/#/zh-CN/component/installation)
 * [Vue官网](https://cn.vuejs.org/v2/guide/)
 * [axios官网](https://github.com/mzabriskie/axios)
