@@ -29,7 +29,7 @@
             shapeType="circle"
             :particleSize="6"
             linesColor="#409EFF"
-            :linesWidth="2"
+            :linesWidth="1"
             :lineLinked="true"
             :lineOpacity="0.4"
             :linesDistance="150"
@@ -173,6 +173,7 @@ export default {
   padding: 20px;
   box-shadow: 2px 2px 2px #ccc;
   z-index: 3;
+  background: rgba(216,220,229,0.6);
   .el-form-item {
     margin-bottom: 25px !important;
   }
