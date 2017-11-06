@@ -1,6 +1,6 @@
 <template>
     <div class="bg">
-        <div class="login-wrap animated bounceInDown" v-title="'登录Auto VUE'">
+        <div class="login-wrap animated flipInY" v-title="'登录Auto VUE'">
             <h3>Auto Vue</h3>
             <h3>欢迎使用自动化装逼系统</h3>
             <el-form ref="form" :model="form" :rules="rules" label-width="0px">
@@ -17,7 +17,7 @@
                     </el-row>
                 </el-form-item>
                 <el-form-item>
-                    <el-button type="primary" @click="Login('form')">登录</el-button>
+                    <el-button type="primary" @click="Login('form')">登 录</el-button>
                 </el-form-item>
             </el-form>
         </div>
@@ -174,12 +174,14 @@ export default {
   padding: 20px;
   z-index: 3;
   background: rgba(216,220,229,0.5);
+//   background: #EDF2FC;
+//   opacity: 0.5;
   .el-form-item {
     margin-bottom: 25px !important;
   }
   h3 {
     text-align: center;
-    color: #475669;
+    color: #2b2d2f;
     margin-top: 0px;
     margin-bottom: 5px;
   }
