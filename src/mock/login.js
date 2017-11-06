@@ -4,7 +4,7 @@ if (debug) {
     Mock.mock(/login/, {
         "data": {
             userId: "@integer(1,10)",
-            "userName|1": ["鲁班七号", "典韦", "蔡文姬", "王昭君"]
+            "userName|1": ["鲁班七号", "典韦", "蔡文姬", "王昭君", "妲己"]
         },
         "msg": "Success",
         "status": "YQ-000"
@@ -18,7 +18,7 @@ if (debug) {
                 children: [{
                     name: '项目信息',
                     router: '/project-info',
-                    icon: 'el-icon-menu'
+                    icon: 'el-icon-information'
                 }, {
                     name: '报名列表',
                     router: '/enroll-list',

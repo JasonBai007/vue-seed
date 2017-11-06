@@ -1,6 +1,6 @@
 <template>
     <div class="bg">
-        <div class="login-wrap animated bounceInDown" v-title="'登录Auto OP'">
+        <div class="login-wrap animated bounceInDown" v-title="'登录Auto VUE'">
             <h3>Auto Vue</h3>
             <h3>欢迎使用自动化装逼工具</h3>
             <el-form ref="form" :model="form" :rules="rules" label-width="0px">
