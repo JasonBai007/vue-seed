@@ -27,6 +27,7 @@ yarn run release
 ## Tech Stack
 * Vue
 * Vue-Router
+* Vuex
 * Axios
 * jsonp
 * eCharts
