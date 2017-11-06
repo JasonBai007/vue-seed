@@ -27,9 +27,6 @@ yarn run release
 ## Tech Stack
 * Vue
 * Vue-Router
-* vue-qr
-* vuedraggable
-* xlsx
 * Axios
 * jsonp
 * eCharts
@@ -43,6 +40,12 @@ yarn run release
 * js-cookie
 * MockJS
 * Yarn
+
+## Stack Maybe Need
+* vue-qr  二维码生成插件
+* vuedraggable  拖拽功能
+* vue-particles  粒子星空效果
+* xlsx  读取excel表
 
 ## Useful Links
 * [饿了么组件](http://element.eleme.io/#/zh-CN/component/installation)
