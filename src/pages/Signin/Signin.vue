@@ -2,7 +2,7 @@
     <div class="bg">
         <div class="login-wrap animated bounceInDown" v-title="'登录Auto VUE'">
             <h3>Auto Vue</h3>
-            <h3>欢迎使用自动化装逼工具</h3>
+            <h3>欢迎使用自动化装逼系统</h3>
             <el-form ref="form" :model="form" :rules="rules" label-width="0px">
                 <el-form-item prop="name">
                     <el-input placeholder="用户名" v-model="form.name"></el-input>
@@ -23,12 +23,12 @@
         </div>
         <!-- 粒子漂浮物 -->
         <vue-particles
-            color="#409EFF"
+            color="#fff"
             :particleOpacity="0.7"
             :particlesNumber="80"
             shapeType="circle"
-            :particleSize="6"
-            linesColor="#409EFF"
+            :particleSize="5"
+            linesColor="#fff"
             :linesWidth="2"
             :lineLinked="true"
             :lineOpacity="0.4"
@@ -158,6 +158,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../assets/img/sky.jpg');
+    background-size: 100% 100%;
     #particles-js {
         position: absolute;
         top: 0;
@@ -169,11 +171,9 @@ export default {
 .login-wrap {
   width: 330px;
   border-radius: 5px;
-  border: 1px solid #bfcbd9;
   padding: 20px;
-  box-shadow: 2px 2px 2px #ccc;
   z-index: 3;
-  background: rgba(216,220,229,0.6);
+  background: rgba(216,220,229,0.5);
   .el-form-item {
     margin-bottom: 25px !important;
   }

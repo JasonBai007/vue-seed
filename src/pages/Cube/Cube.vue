@@ -1,5 +1,5 @@
 <template>
-    <div class="cube-wrap">
+    <div class="cube-wrap" v-title="'魔幻立方'">
        <Cube></Cube>
     </div>
 </template>
