@@ -159,7 +159,8 @@ export default {
     justify-content: center;
     align-items: center;
     background-image: url('../../assets/img/sky.jpg');
-    background-size: 100% 100%;
+    background-position: -20% 10%;
+    background-size: contain;
     #particles-js {
         position: absolute;
         top: 0;
@@ -173,9 +174,8 @@ export default {
   border-radius: 5px;
   padding: 20px;
   z-index: 3;
+  margin-right: -37%;
   background: rgba(216,220,229,0.5);
-//   background: #EDF2FC;
-//   opacity: 0.5;
   .el-form-item {
     margin-bottom: 25px !important;
   }
