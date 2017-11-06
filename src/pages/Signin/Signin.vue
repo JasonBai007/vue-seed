@@ -2,7 +2,7 @@
     <div class="bg">
         <div class="login-wrap animated flipInY" v-title="'登录Auto VUE'">
             <h3>Auto Vue</h3>
-            <h3>欢迎使用自动化装逼系统</h3>
+            <h3>欢迎使用自动化<span>装逼</span>系统</h3>
             <el-form ref="form" :model="form" :rules="rules" label-width="0px">
                 <el-form-item prop="name">
                     <el-input placeholder="用户名" v-model="form.name"></el-input>
@@ -181,9 +181,12 @@ export default {
   }
   h3 {
     text-align: center;
-    color: #2b2d2f;
+    color: #ebedef;
     margin-top: 0px;
     margin-bottom: 5px;
+    span {
+        color: #20a0ff;
+    }
   }
   form {
     margin-top: 25px;
@@ -197,6 +200,7 @@ export default {
   }
   button {
     width: 100%;
+    font-weight: 600;
   }
 }
 </style>
