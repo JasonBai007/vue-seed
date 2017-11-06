@@ -5,7 +5,7 @@
             <h3>欢迎使用自动化装逼工具</h3>
             <el-form ref="form" :model="form" :rules="rules" label-width="0px">
                 <el-form-item prop="name">
-                    <el-input placeholder="手机号 / 邮箱" v-model="form.name"></el-input>
+                    <el-input placeholder="用户名" v-model="form.name"></el-input>
                 </el-form-item>
                 <el-form-item prop="password">
                     <el-input placeholder="密码" v-model="form.password"></el-input>
@@ -29,7 +29,7 @@
             shapeType="circle"
             :particleSize="6"
             linesColor="#409EFF"
-            :linesWidth="1"
+            :linesWidth="2"
             :lineLinked="true"
             :lineOpacity="0.4"
             :linesDistance="150"
@@ -73,8 +73,8 @@ export default {
     // };
     return {
       form: {
-        name: Cookies.get("userInfo") || "",
-        password: Cookies.get("passwordInfo") || ""
+        name: Cookies.get("userInfo") || "admin",
+        password: Cookies.get("passwordInfo") || "654321"
       },
       isMemery: false,
       rules: {
