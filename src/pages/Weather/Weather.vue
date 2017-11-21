@@ -40,7 +40,7 @@
             </div>
             <div v-show="!isChart" class="animated fadeIn">
               <!-- 这里是表格组件 -->
-              <el-table stripe :data="tableData" style="width: 100%">
+              <el-table stripe :data="tableData" style="width: 100%" size="small">
                 <el-table-column prop="date" label="日期"></el-table-column>
                 <el-table-column prop="high" label="最高气温（℃）"></el-table-column>
                 <el-table-column prop="low" label="最低气温（℃）"></el-table-column>
