@@ -33,7 +33,7 @@ yarn run release
 * eCharts
 * Vue-cli
 * ES6
-* Element-UI @ 1.4.3
+* Element-UI @ 2.0.5
 * Less
 * Animate.CSS
 * MomentJS
