@@ -18,7 +18,7 @@ if (debug) {
                 children: [{
                     name: '项目信息',
                     router: '/project-info',
-                    icon: 'el-icon-information'
+                    icon: 'el-icon-date'
                 }, {
                     name: '报名列表',
                     router: '/enroll-list',
@@ -27,7 +27,7 @@ if (debug) {
             }, {
                 name: '天气预报',
                 router: '/weather',
-                icon: 'el-icon-star-off',
+                icon: 'el-icon-picture-outline',
                 children: []
             }, {
                 name: '魔幻立方',

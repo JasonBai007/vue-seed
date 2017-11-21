@@ -69,32 +69,23 @@ body {
     }
 }
 
-// 全局加重面包屑导航样式
-.el-breadcrumb__item__inner {
-    font-size: 16px;
-    font-weight: bold;
+// 左侧导航图表垂直方向对齐
+// 宽度还得自己设定，坑死
+.el-menu {
+    width: 100%;
+}
+.el-menu-item [class^=el-icon-] {
+    vertical-align: middle;
+    color: #ddd;
+}
+.el-submenu [class^=el-icon-] {
+    color: #ddd;
+}
+.el-submenu__title i {
+    vertical-align: middle;
+    color: #ddd;
 }
 
-// 报名列表页，整体样式控制：在全局修改报名列表的select的宽度
-.enrollform .el-form-item__content {
-    width: 160px;
-}
-// 报名列表表格样式覆盖
-.smalltable {
-    font-size: 12px;
-}
-.smalltable tr div.cell {
-    padding: 0 10px;
-}
-
-// 表单页，表单包裹层样式控制
-.form-wrap {
-    width: 60%;
-    margin: 30px auto 0 13%;
-    .el-select {
-        width: 100%;
-    }
-}
 // 自定义必填项的左上角红色星号
 .required-self label.el-form-item__label:before {
     content: '*';

@@ -11,6 +11,7 @@ import 'font-awesome/less/font-awesome.less'
 import {
     Pagination,
     Dialog,
+    Autocomplete,
     Dropdown,
     DropdownMenu,
     DropdownItem,
@@ -24,6 +25,7 @@ import {
     RadioGroup,
     RadioButton,
     Checkbox,
+    CheckboxButton,
     CheckboxGroup,
     Switch,
     Select,
@@ -33,7 +35,6 @@ import {
     ButtonGroup,
     Table,
     TableColumn,
-    DatePicker,
     Popover,
     Tooltip,
     Breadcrumb,
@@ -44,20 +45,30 @@ import {
     TabPane,
     Tag,
     Alert,
+    Slider,
     Icon,
     Row,
     Col,
-    Spinner,
-    Badge,
     Card,
+    Rate,
+    Collapse,
+    CollapseItem,
+    Cascader,
+    Transfer,
+    Container,
+    Header,
+    Aside,
+    Main,
+    Footer,
     Loading,
     MessageBox,
     Message,
-    Upload
+    Notification
 } from 'element-ui'
 
 Vue.use(Pagination)
 Vue.use(Dialog)
+Vue.use(Autocomplete)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
@@ -80,7 +91,6 @@ Vue.use(Button)
 Vue.use(ButtonGroup)
 Vue.use(Table)
 Vue.use(TableColumn)
-Vue.use(DatePicker)
 Vue.use(Popover)
 Vue.use(Tooltip)
 Vue.use(Breadcrumb)
@@ -91,13 +101,20 @@ Vue.use(Tabs)
 Vue.use(TabPane)
 Vue.use(Tag)
 Vue.use(Alert)
+Vue.use(Slider)
 Vue.use(Icon)
 Vue.use(Row)
 Vue.use(Col)
-Vue.use(Spinner)
-Vue.use(Badge)
 Vue.use(Card)
-Vue.use(Upload)
+Vue.use(Rate)
+Vue.use(Collapse)
+Vue.use(CollapseItem)
+Vue.use(Cascader)
+Vue.use(Container)
+Vue.use(Header)
+Vue.use(Aside)
+Vue.use(Main)
+Vue.use(Footer)
 
 Vue.use(Loading.directive)
 

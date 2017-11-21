@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     chartId: function() {
-      return "id" + new Date().getTime();
+      return "id-" + new Date().getTime();
     }
   },
   mounted() {
@@ -41,6 +41,10 @@ export default {
     this.renderLine();
     // 添加监听事件，监听窗口变化
     this.resizeChart();
+  },
+  destroyed () {
+    //   组件被销毁后解除监听事件
+      window.onresize = null
   },
   methods: {
     setSize() {

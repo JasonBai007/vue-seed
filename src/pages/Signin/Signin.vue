@@ -12,8 +12,8 @@
                 </el-form-item>
                 <el-form-item>
                     <el-row type="flex" justify="space-between">
-                        <el-checkbox v-model="isMemery">记住密码</el-checkbox>
-                        <a href="" @click.prevent="openMsg">忘记密码？</a>
+                        <el-checkbox v-model="isMemery" style="color:#eee">记住密码</el-checkbox>
+                        <a href="" @click.prevent="openMsg"  style="color:#eee">忘记密码？</a>
                     </el-row>
                 </el-form-item>
                 <el-form-item>
