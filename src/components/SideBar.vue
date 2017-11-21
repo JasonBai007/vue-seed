@@ -3,7 +3,7 @@
 <template>
     <div id="sidebar-wrap" :class="{ collapsed: toggSiderBar }">
         <h3 class="logo rythm twist1">AUTO VUE</h3>
-        <el-menu background-color="#324157" text-color="#ddd" :default-active="$route.path" :unique-opened="isUnique" :router="isRouter" mode="vertical" :collapse="toggSiderBar" class="rythm vanish1">
+        <el-menu background-color="#324157" text-color="#ddd" :default-active="$route.path" :unique-opened="isUnique" :router="isRouter" mode="vertical" :collapse="toggSiderBar">
             <template v-for="item in menu">
                 <el-submenu v-if="!(item.children.length === 0)" :index="item.router" :key="item.router">
                     <template slot="title">

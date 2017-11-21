@@ -4,7 +4,7 @@ if (debug) {
     Mock.mock(/login/, {
         "data": {
             userId: "@integer(1,10)",
-            "userName|1": ["鲁班七号", "典韦", "蔡文姬", "王昭君", "妲己"]
+            "userName|1": ["鲁班七号", "典韦", "蔡文姬", "王昭君", "妲己","铠"]
         },
         "msg": "Success",
         "status": "YQ-000"

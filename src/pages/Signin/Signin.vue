@@ -26,7 +26,7 @@
             color="#fff"
             :particleOpacity="0.7"
             :particlesNumber="80"
-            shapeType="circle"
+            shapeType="star"
             :particleSize="5"
             linesColor="#fff"
             :linesWidth="2"
