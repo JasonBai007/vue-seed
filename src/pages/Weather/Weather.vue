@@ -105,8 +105,8 @@ export default {
       this.lineData.series2 = [];
       data.forEach((v, i) => {
         this.lineData.xAxis.push(v.date);
-        this.lineData.series1.push(v.high.match(/\d/g).join(""));
-        this.lineData.series2.push(v.low.match(/\d/g).join(""));
+        this.lineData.series1.push(v.high.match(/-|\d+/g).join(""));
+        this.lineData.series2.push(v.low.match(/-|\d+/g).join(""));
       });
     },
     renderTable(data) {
@@ -114,8 +114,8 @@ export default {
       data.forEach((v, i) => {
         var obj = {
           date: v.date,
-          high: v.high.match(/\d/g).join(""),
-          low: v.low.match(/\d/g).join("")
+          high: v.high.match(/-|\d+/g).join(""),
+          low: v.low.match(/-|\d+/g).join("")
         };
         this.tableData.push(obj);
       });
