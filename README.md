@@ -65,3 +65,8 @@ yarn run release
 * 所有组件文件名首字母大写
 * 公共组件请放到components文件夹下
 * 代码缩进采用4个空格
+
+## Screen Shot
+
+1、登录页
+![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/login.png)
