@@ -9,8 +9,6 @@ import store from './store'
 import VueParticles from 'vue-particles'
 import 'font-awesome/less/font-awesome.less'
 import {
-    Pagination,
-    Dialog,
     Autocomplete,
     Dropdown,
     DropdownMenu,
@@ -33,26 +31,18 @@ import {
     OptionGroup,
     Button,
     ButtonGroup,
-    Table,
-    TableColumn,
     Popover,
     Tooltip,
-    Breadcrumb,
-    BreadcrumbItem,
     Form,
     FormItem,
     Tabs,
     TabPane,
     Tag,
-    Alert,
-    Slider,
     Icon,
     Row,
     Col,
     Card,
     Rate,
-    Collapse,
-    CollapseItem,
     Cascader,
     Transfer,
     Container,
@@ -66,8 +56,6 @@ import {
     Notification
 } from 'element-ui'
 
-Vue.use(Pagination)
-Vue.use(Dialog)
 Vue.use(Autocomplete)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
@@ -89,26 +77,18 @@ Vue.use(Option)
 Vue.use(OptionGroup)
 Vue.use(Button)
 Vue.use(ButtonGroup)
-Vue.use(Table)
-Vue.use(TableColumn)
 Vue.use(Popover)
 Vue.use(Tooltip)
-Vue.use(Breadcrumb)
-Vue.use(BreadcrumbItem)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Tabs)
 Vue.use(TabPane)
 Vue.use(Tag)
-Vue.use(Alert)
-Vue.use(Slider)
 Vue.use(Icon)
 Vue.use(Row)
 Vue.use(Col)
 Vue.use(Card)
 Vue.use(Rate)
-Vue.use(Collapse)
-Vue.use(CollapseItem)
 Vue.use(Cascader)
 Vue.use(Container)
 Vue.use(Header)
@@ -120,7 +100,6 @@ Vue.use(Loading.directive)
 
 Vue.prototype.$loading = Loading.service
 Vue.prototype.$msgbox = MessageBox
-Vue.prototype.$alert = MessageBox.alert
 Vue.prototype.$confirm = MessageBox.confirm
 Vue.prototype.$prompt = MessageBox.prompt
 Vue.prototype.$notify = Notification
@@ -156,7 +135,7 @@ axios.interceptors.response.use(
                 // 如果后端返回没有权限
                 case 401:
                     // 清除token信息并跳转到登录页面
-                    Cookies.set('isLogin','0')
+                    Cookies.set('isLogin', '0')
                     router.replace('login')
             }
         }
