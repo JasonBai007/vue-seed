@@ -10,8 +10,11 @@
 let echarts = require("echarts/lib/echarts");
 // 引入折线图组件
 require("echarts/lib/chart/line");
+require("echarts/lib/chart/bar");
 // 引入提示框和图例组件
+require("echarts/lib/component/title");
 require("echarts/lib/component/tooltip");
+require("echarts/lib/component/toolbox");
 require("echarts/lib/component/legend");
 
 export default {
@@ -42,15 +45,15 @@ export default {
     // 添加监听事件，监听窗口变化
     this.resizeChart();
   },
-  destroyed () {
+  destroyed() {
     //   组件被销毁后解除监听事件
-      window.onresize = null
+    window.onresize = null;
   },
   methods: {
     setSize() {
       let chart = document.getElementById(this.chartId);
       chart.style.width = window.innerWidth - 230 + "px";
-      chart.style.height = window.innerHeight * 46 / 100 + "px";
+      chart.style.height = window.innerHeight * 56 / 100 + "px";
     },
     resizeChart() {
       //监听窗口宽度变化，注意要使用箭头函数
@@ -64,9 +67,16 @@ export default {
     renderLine() {
       let data = this.data;
       let opts = {
+        title: {
+          text: "近五天气温趋势",
+          x: "center",
+          textStyle: {
+            color: "#666"
+          }
+        },
         color: this.$store.state.module1.chartTheme,
         grid: {
-          top: "7%",
+          top: "20%",
           left: "3%",
           right: "3%",
           bottom: "12%",
@@ -74,6 +84,20 @@ export default {
         },
         tooltip: {
           trigger: "axis"
+        },
+        toolbox: {
+          show: true,
+          top: 20,
+          right: 20,
+          feature: {
+            dataView: { readOnly: false },
+            magicType: { type: ["line", "bar"] },
+            dataZoom: {
+              yAxisIndex: "none"
+            },
+            restore: {},
+            saveAsImage: {}
+          }
         },
         legend: {
           bottom: 0,
