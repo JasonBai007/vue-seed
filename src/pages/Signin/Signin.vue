@@ -1,6 +1,6 @@
 <template>
     <div class="bg">
-        <div class="login-wrap animated flipInY" v-title="'登录Auto VUE'">
+        <div class="login-wrap animated flipInY" v-title="'Auto Vue'">
             <h3>Auto Vue</h3>
             <h3>欢迎使用自动化<span>装逼</span>系统</h3>
             <el-form ref="form" :model="form" :rules="rules" label-width="0px">
