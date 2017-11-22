@@ -69,4 +69,8 @@ yarn run release
 ## Screen Shot
 
 1、登录页
-![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/login.png)
+![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/login.jpg)
+1、气象页
+![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/weather.png)
+1、魔方页
+![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/cube.png)
