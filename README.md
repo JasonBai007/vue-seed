@@ -34,6 +34,7 @@ yarn run release
 * Vue-cli
 * ES6
 * Element-UI @ 2.0.5
+* Flex
 * Less
 * Animate.CSS
 * MomentJS
@@ -59,7 +60,8 @@ yarn run release
 ## Best Practice
 * 安装或删除模块请使用Yarn命令 ！！！！！！！！
 * 安装依赖包：Yarn add XXX
+* 安装依赖包：Yarn upgrade XXX@x.x.x
 * 卸载依赖包：Yarn remove XXX
 * 所有组件文件名首字母大写
 * 公共组件请放到components文件夹下
-* 代码缩进采用4个空格或1个Tab
+* 代码缩进采用4个空格
