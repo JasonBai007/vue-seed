@@ -151,6 +151,7 @@ export default {
     lineData: {
       handler(newVal, val) {
         this.data = newVal;
+        this.myChart.dispose()
         this.renderLine();
       },
       deep: true
