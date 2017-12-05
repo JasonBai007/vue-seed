@@ -9,7 +9,6 @@ import store from './store'
 import VueParticles from 'vue-particles'
 import 'font-awesome/less/font-awesome.less'
 import {
-    Autocomplete,
     Dropdown,
     DropdownMenu,
     DropdownItem,
@@ -56,7 +55,6 @@ import {
     Notification
 } from 'element-ui'
 
-Vue.use(Autocomplete)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
