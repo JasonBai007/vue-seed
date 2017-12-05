@@ -9,6 +9,7 @@ import store from './store'
 import VueParticles from 'vue-particles'
 import 'font-awesome/less/font-awesome.less'
 import {
+    Autocomplete,
     Dropdown,
     DropdownMenu,
     DropdownItem,
@@ -44,17 +45,13 @@ import {
     Rate,
     Cascader,
     Transfer,
-    Container,
-    Header,
-    Aside,
-    Main,
-    Footer,
     Loading,
     MessageBox,
     Message,
     Notification
 } from 'element-ui'
 
+Vue.use(Autocomplete)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
@@ -88,11 +85,7 @@ Vue.use(Col)
 Vue.use(Card)
 Vue.use(Rate)
 Vue.use(Cascader)
-Vue.use(Container)
-Vue.use(Header)
-Vue.use(Aside)
-Vue.use(Main)
-Vue.use(Footer)
+
 
 Vue.use(Loading.directive)
 

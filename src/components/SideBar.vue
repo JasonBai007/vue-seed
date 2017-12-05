@@ -5,7 +5,7 @@
         <h3 class="logo rythm twist1">AUTO VUE</h3>
         <el-menu background-color="#324157" text-color="#ddd" :default-active="$route.path" :unique-opened="isUnique" :router="isRouter" mode="vertical" :collapse="toggSiderBar">
             <template v-for="item in menu">
-                <el-submenu v-if="!(item.children.length === 0)" :index="item.router" :key="item.router">
+                <el-submenu v-if="item.children.length !== 0" :index="item.router" :key="item.router">
                     <template slot="title">
                         <i :class="item.icon"></i>
                         <span slot="title">{{item.name}}</span>
@@ -16,7 +16,7 @@
                     </el-menu-item>
                 </el-submenu>
 
-                <el-menu-item v-else-if="item.children.length === 0" :index="item.router" :key="item.router">
+                <el-menu-item v-else :index="item.router" :key="item.router">
                     <i :class="item.icon"></i>
                     <span slot="title">{{item.name}}</span>
                 </el-menu-item>
@@ -57,7 +57,6 @@ const music = require("../assets/audio/romeo's tune.mp3");
 
 export default {
   name: "sidebar",
-  props: ['toggSiderBar'],
   data() {
     return {
       isMusicOn: false,
@@ -66,16 +65,21 @@ export default {
       menu: localStorage.menu ? JSON.parse(localStorage.menu) : []
     };
   },
+  computed: {
+    toggSiderBar: function() {
+      return this.$store.state.common.isCollapse;
+    }
+  },
   created() {
     this.initRythm();
   },
   methods: {
     initRythm() {
       rythm.setMusic(music);
-      rythm.addRythm('twist1', 'twist', 0, 10)
-      rythm.addRythm('jump1', 'jump', 0, 10)
-      rythm.addRythm('swing1', 'swing', 0, 10)
-      rythm.addRythm('vanish1', 'vanish', 0, 10)
+      rythm.addRythm("twist1", "twist", 0, 10);
+      rythm.addRythm("jump1", "jump", 0, 10);
+      rythm.addRythm("swing1", "swing", 0, 10);
+      rythm.addRythm("vanish1", "vanish", 0, 10);
       rythm.addRythm("shake2", "shake", 150, 40, {
         min: 0,
         max: 20

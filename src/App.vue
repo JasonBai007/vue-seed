@@ -7,10 +7,10 @@
         <!-- 如果路由信息中的meta中的hidden等于true，就隐藏下面的视图 -->
         <div v-if="!this.$route.meta.hidden">
             <!-- 这是侧导航 -->
-            <side-bar :toggSiderBar="controlSB"></side-bar>
-            <div class="con-wrap" :class="{conCollapse: controlSB}">
+            <side-bar></side-bar>
+            <div class="con-wrap" :class="{conCollapse: isCollapse}">
                 <!-- 这是顶部导航 -->
-                <top-bar @toggleSiderBar="passtoSiderBar"></top-bar>
+                <top-bar></top-bar>
                 <!-- 这是组件要插入的地方 -->
                 <router-view class="page-component-wrap animated fadeIn"></router-view>
             </div>
@@ -26,7 +26,11 @@ export default {
     name: 'app',
     data() {
         return {
-            controlSB: false
+        }
+    },
+    computed: {
+        isCollapse: function () {
+            return this.$store.state.common.isCollapse
         }
     },
     components: {
@@ -34,9 +38,6 @@ export default {
         'side-bar': SideBar,
     },
     methods: {
-        passtoSiderBar(load) {
-            this.controlSB = load
-        }
     }
 }
 </script>

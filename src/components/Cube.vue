@@ -17,6 +17,9 @@ export default {
   mounted() {
       this.listenMouseEvent()
   },
+  beforeDestroy () {
+      document.onmousedown = null
+  },
   methods: {
     listenMouseEvent() {
       document.onmousedown = ev => {

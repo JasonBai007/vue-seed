@@ -25,14 +25,17 @@ export default {
     name: 'topbar',
     data() {
         return {
-            isCollapse: false,
             userName: localStorage.userName || ''
+        }
+    },
+    computed: {
+        isCollapse: function () {
+            return this.$store.state.common.isCollapse
         }
     },
     methods: {
         toggleSiderBar() {
-            this.isCollapse === false ? this.isCollapse = true : this.isCollapse = false;
-            this.$emit('toggleSiderBar',this.isCollapse)
+            this.$store.commit('toggleSiderBar')
         },
         logout() {
             Cookies.set('isLogin','0')
