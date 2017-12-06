@@ -25,7 +25,7 @@ yarn run release
 ```
 
 ## Tech Stack
-* Vue
+* Vue @ 2.5.9
 * Vue-Router
 * Vuex
 * Axios
@@ -33,7 +33,7 @@ yarn run release
 * eCharts
 * Vue-cli
 * ES6
-* Element-UI @ 2.0.5
+* Element-UI @ 2.0.7
 * Flex
 * Less
 * Animate.CSS
