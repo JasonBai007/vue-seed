@@ -53,7 +53,7 @@
 <script>
 import Rythm from "rythm.js";
 const rythm = new Rythm();
-const music = require("../assets/audio/romeo's tune.mp3");
+const music = require("../assets/audio/romeostune.mp3");
 
 export default {
   name: "sidebar",
