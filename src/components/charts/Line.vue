@@ -2,7 +2,7 @@
     <!-- 包裹层设置初始高度，宽度不管 -->
     <div id="myChartWrap">
         <!-- 这里是要渲染的图表 -->
-        <div :id="chartId" style="height:300px;"></div>
+        <div id="lineId"></div>
     </div>
 </template>
 <script>
@@ -33,8 +33,8 @@ export default {
     };
   },
   computed: {
-    chartId: function() {
-      return "id-" + new Date().getTime();
+    myChart() {
+      return echarts.init(document.getElementById("lineId"));
     }
   },
   mounted() {
@@ -51,17 +51,18 @@ export default {
   },
   methods: {
     setSize() {
-      let chart = document.getElementById(this.chartId);
-      chart.style.width = window.innerWidth - 230 + "px";
-      chart.style.height = window.innerHeight * 56 / 100 + "px";
+      let wrapWidth = document.getElementById("myChartWrap").clientWidth;
+      let wrapHeight = document.getElementById("myChartWrap").clientHeight;
+      this.myChart.resize({
+        width: wrapWidth,
+        height: wrapHeight
+      });
     },
     resizeChart() {
       //监听窗口宽度变化，注意要使用箭头函数
       window.onresize = () => {
         //设置图表宽高
         this.setSize();
-        // 调用echarts的resize函数
-        this.myChart.resize();
       };
     },
     renderLine() {
@@ -142,7 +143,6 @@ export default {
           }
         ]
       };
-      this.myChart = echarts.init(document.getElementById(this.chartId));
       this.myChart.setOption(opts);
     }
   },
@@ -151,7 +151,6 @@ export default {
     lineData: {
       handler(newVal, val) {
         this.data = newVal;
-        this.myChart.dispose()
         this.renderLine();
       },
       deep: true
@@ -160,5 +159,8 @@ export default {
 };
 </script>
 <style lang="less">
-
+#myChartWrap {
+  width: 100%;
+  height: calc(100vh - 45px);
+}
 </style>
