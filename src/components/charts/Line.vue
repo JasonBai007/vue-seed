@@ -24,6 +24,7 @@ export default {
     lineData: Object
   },
   data() {
+    console.log("初始化data");
     return {
       data: {
         xAxis: [],
@@ -34,23 +35,30 @@ export default {
   },
   computed: {
     myChart() {
+      console.log("生成myChart实例");
       return echarts.init(document.getElementById("lineId"));
     }
   },
   mounted() {
+    console.log("初始化mounted");
     // 设置图表的初始大小
     this.setSize();
     // 渲染图表
-    this.renderLine();
+    // this.renderLine();
     // 添加监听事件，监听窗口变化
-    this.resizeChart();
+    window.onresize = () => {
+      //设置图表宽高
+      this.setSize();
+    };
   },
   destroyed() {
+    console.log("被销毁了");
     //   组件被销毁后解除监听事件
     window.onresize = null;
   },
   methods: {
     setSize() {
+      console.log("setSize被执行");
       let wrapWidth = document.getElementById("myChartWrap").clientWidth;
       let wrapHeight = document.getElementById("myChartWrap").clientHeight;
       this.myChart.resize({
@@ -58,14 +66,8 @@ export default {
         height: wrapHeight
       });
     },
-    resizeChart() {
-      //监听窗口宽度变化，注意要使用箭头函数
-      window.onresize = () => {
-        //设置图表宽高
-        this.setSize();
-      };
-    },
     renderLine() {
+      console.log("renderLine被执行");
       let data = this.data;
       let opts = {
         title: {
@@ -143,6 +145,8 @@ export default {
           }
         ]
       };
+      echarts.init(document.getElementById("lineId"));
+      console.log("向图表实例中插入数据");
       this.myChart.setOption(opts);
     }
   },
@@ -150,6 +154,7 @@ export default {
     // 深度监听传入的数据变化，一定加deep属性哦
     lineData: {
       handler(newVal, val) {
+        console.log("触发watch事件");
         this.data = newVal;
         this.renderLine();
       },
