@@ -4,7 +4,7 @@
     <div id="topbar-wrap" :class="{ topCollapsed: isCollapse }">
         <el-row type="flex" justify="space-between" class="rythm shake2">
             <el-col :span="5">
-                <i :class="[isCollapse? 'fa-th-large': 'fa-navicon','fa']" @click="toggleSiderBar"></i>
+                <i :class="[isCollapse? 'nav-rotate': '','fa fa-bars']" @click="toggleSiderBar"></i>
             </el-col>
             <el-col :span="6">
                 <el-row type="flex" class="row-bg" justify="end">
@@ -20,94 +20,97 @@
     </div>
 </template>
 <script>
-import Cookies from 'js-cookie'
+import Cookies from "js-cookie";
 export default {
-    name: 'topbar',
-    data() {
-        return {
-            userName: localStorage.userName || ''
-        }
-    },
-    computed: {
-        isCollapse: function () {
-            return this.$store.state.common.isCollapse
-        }
-    },
-    methods: {
-        toggleSiderBar() {
-            this.$store.commit('toggleSiderBar')
-        },
-        logout() {
-            Cookies.set('isLogin','0')
-            localStorage.clear()
-            this.$router.push('signin')
-        }
-    },
-    watch: {
-        $route(to, from) {
-            this.pathName = this.$route.path.substring(1);
-            this.nowPath = this.$route.path;
-        }
+  name: "topbar",
+  data() {
+    return {
+      userName: localStorage.userName || ""
+    };
+  },
+  computed: {
+    isCollapse: function() {
+      return this.$store.state.common.isCollapse;
     }
-}
+  },
+  methods: {
+    toggleSiderBar() {
+      this.$store.commit("toggleSiderBar");
+    },
+    logout() {
+      Cookies.set("isLogin", "0");
+      localStorage.clear();
+      this.$router.push("signin");
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.pathName = this.$route.path.substring(1);
+      this.nowPath = this.$route.path;
+    }
+  }
+};
 </script>
 <style scoped lang="less">
 #topbar-wrap {
-    overflow: hidden;
-    border-bottom: 1px solid #e7eaec;
-    background: #324157;
+  overflow: hidden;
+  border-bottom: 1px solid #e7eaec;
+  background: #324157;
+  color: #fff;
+  padding: 0 15px;
+  z-index: 4;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  .logo {
     color: #fff;
-    padding-right: 15px;
-    z-index: 4;
-    box-sizing: border-box;
-    transition: all 0.3s;
-    .logo {
-        color: #fff;
-        font-weight: bold;
-        line-height: 60px;
-        margin: 0;
-        letter-spacing: 1px;
+    font-weight: bold;
+    line-height: 60px;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  .freeBtn {
+    margin-top: 12px;
+    text-align: right;
+  }
+  .name {
+    font-weight: 600;
+  }
+  .el-icon-setting {
+    transition: 1s;
+    &:hover {
+      transform: rotate(180deg);
+      cursor: pointer;
     }
-    .freeBtn {
-        margin-top: 12px;
-        text-align: right;
+  }
+  .fa {
+    font-size: 24px;
+    transition: all .3s;
+    &:hover {
+      cursor: pointer;
     }
-    .name {
-        font-weight: 600;
+  }
+  a {
+    line-height: 60px;
+  }
+  a.logout {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: #20a0ff;
     }
-    .el-icon-setting {
-        transition: 1s;
-        &:hover {
-            transform: rotate(180deg);
-            cursor: pointer;
-        }
+  }
+  i {
+    font-size: 20px;
+    line-height: 60px;
+  }
+  .logout {
+    color: #bfcbd9;
+    &:hover {
+      color: #fff;
     }
-    .fa {
-        padding-left: 15px;
-        font-size: 24px;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    a {
-        line-height: 60px;
-    }
-    a.logout {
-        color: #fff;
-        text-decoration: none;
-        &:hover {
-            color: #20a0ff;
-        }
-    }
-    i {
-        font-size: 20px;
-        line-height: 60px;
-    }
-    .logout {
-        color: #bfcbd9;
-        &:hover {
-            color: #fff;
-        }
-    }
+  }
+}
+.fa.nav-rotate {
+  transform: rotate(90deg)
 }
 </style>
