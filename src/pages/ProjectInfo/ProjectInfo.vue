@@ -35,6 +35,7 @@ export default {
             '渲染图表时，可以在渲染前先 this.myChart.dispose()，销毁上次的图表',
             'vue-particles打包报错：https://github.com/creotip/vue-particles/issues/7',
             '配置favicon：https://segmentfault.com/a/1190000010043013#articleHeader5',
+            '切换路由时，vuex里的state不会跟着变，除非在导航守卫里提交mutations',
         ]
     };
   },

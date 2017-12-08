@@ -20,8 +20,17 @@ require("echarts/lib/component/legend");
 export default {
   name: "line",
   props: {
-    // 这里是从父组件传入的数据
-    lineData: Object
+    lineData: {
+      type: Object,
+      required: true,
+      default() {
+        return {
+          xAxis: [],
+          series1: [],
+          series2: []
+        }
+      }
+    }
   },
   data() {
     console.log("初始化data");
@@ -45,14 +54,14 @@ export default {
     this.setSize();
     // 渲染图表
     // this.renderLine();
-    // 添加监听事件，监听窗口变化
+    // 添加监听事件，监听窗口变化，窗口一变，包裹层的宽高也就变了
     window.onresize = () => {
       //设置图表宽高
       this.setSize();
     };
   },
   destroyed() {
-    console.log("被销毁了");
+    console.log("监听被解除，组件被销毁");
     //   组件被销毁后解除监听事件
     window.onresize = null;
   },
@@ -68,7 +77,6 @@ export default {
     },
     renderLine() {
       console.log("renderLine被执行");
-      let data = this.data;
       let opts = {
         title: {
           text: "近五天气温趋势",
@@ -77,7 +85,7 @@ export default {
             color: "#666"
           }
         },
-        color: this.$store.state.module1.chartTheme,
+        color: this.$store.state.common.chartTheme,
         grid: {
           top: "20%",
           left: "3%",
@@ -107,10 +115,7 @@ export default {
           data: ["最高气温", "最低气温"]
         },
         xAxis: {
-          data:
-            data.xAxis.length === 0
-              ? ["星期一", "星期二", "星期三", "星期四", "星期五"]
-              : data.xAxis
+          data: this.data.xAxis.length === 0 ? ["星期一", "星期二", "星期三", "星期四", "星期五"] : this.data.xAxis
         },
         yAxis: {
           type: "value",
@@ -122,7 +127,7 @@ export default {
           {
             name: "最高气温",
             type: "line",
-            data: data.series1.length === 0 ? [0, 0, 0, 0, 0] : data.series1,
+            data: this.data.series1.length === 0 ? [0, 0, 0, 0, 0] : this.data.series1,
             label: {
               normal: {
                 show: true,
@@ -134,7 +139,7 @@ export default {
           {
             name: "最低气温",
             type: "line",
-            data: data.series2.length === 0 ? [0, 0, 0, 0, 0] : data.series2,
+            data: this.data.series2.length === 0 ? [0, 0, 0, 0, 0] : this.data.series2,
             label: {
               normal: {
                 show: true,
@@ -145,17 +150,15 @@ export default {
           }
         ]
       };
-      echarts.init(document.getElementById("lineId"));
-      console.log("向图表实例中插入数据");
       this.myChart.setOption(opts);
     }
   },
   watch: {
     // 深度监听传入的数据变化，一定加deep属性哦
     lineData: {
-      handler(newVal, val) {
-        console.log("触发watch事件");
-        this.data = newVal;
+      handler(val, oldVal) {
+        console.log("watch回调函数被执行");
+        this.data = JSON.parse(JSON.stringify(val))
         this.renderLine();
       },
       deep: true
