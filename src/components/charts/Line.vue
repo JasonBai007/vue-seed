@@ -127,6 +127,7 @@ export default {
           {
             name: "最高气温",
             type: "line",
+            smooth: true,
             data: this.data.series1.length === 0 ? [0, 0, 0, 0, 0] : this.data.series1,
             label: {
               normal: {
@@ -139,6 +140,7 @@ export default {
           {
             name: "最低气温",
             type: "line",
+            smooth: true,
             data: this.data.series2.length === 0 ? [0, 0, 0, 0, 0] : this.data.series2,
             label: {
               normal: {
