@@ -30,7 +30,7 @@ export default {
           //鼠标移动时
           let x1 = ev.clientX - x + 30; //当前位置减去下时鼠标的位置，就获取移动了多少度，应为一开始有初始角度所以加30°
           let y1 = ev.clientY - y - 30; //甚至样式每次鼠标移动式更改样式
-          this.$refs.wrapper.style.transform = "perspective(1000px) rotateY(" + x1 + "deg) rotateX(" + -(y1) + "deg)"
+          this.$refs.wrapper.style.transform = `perspective(1000px) rotateY(${x1}deg) rotateX(${-y1}deg)`
         };
         document.onmouseup = () => {
           document.onmousemove = null;

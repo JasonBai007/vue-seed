@@ -16,11 +16,11 @@ if (debug) {
                 router: '',
                 icon: 'el-icon-time',
                 children: [{
-                    name: '项目信息',
+                    name: '开发备忘',
                     router: '/project-info',
                     icon: 'el-icon-date'
                 }, {
-                    name: '报名列表',
+                    name: '关于作者',
                     router: '/enroll-list',
                     icon: 'el-icon-document'
                 }]
