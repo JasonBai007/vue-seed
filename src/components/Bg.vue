@@ -26,9 +26,10 @@ export default {
           this.$refs.wrapper.style.transform = `perspective(1000px) rotateY(${X / deepParam}deg) rotateX(${-Y / deepParam}deg)`;
         };
       };
-      dom.onmouseout = () => {
+      dom.onmouseout = ev => {
         dom.onmousemove = null;
-        this.$refs.wrapper.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`;
+        // 鼠标移动到边界时，容易造成抖动，所以，加了延时
+        setTimeout( "document.getElementById('wrapper').style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`",200)
       };
     }
   }
