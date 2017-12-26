@@ -30,7 +30,7 @@ yarn run release
 * Vuex
 * Axios
 * jsonp
-* eCharts
+* eCharts @ 3.7.2
 * Vue-cli
 * ES6
 * Element-UI @ 2.0.7
@@ -70,7 +70,7 @@ yarn run release
 
 1、登录页
 ![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/login.jpg)
-1、气象页
+2、气象页
 ![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/weather.png)
-1、魔方页
+3、魔方页
 ![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/cube.png)
