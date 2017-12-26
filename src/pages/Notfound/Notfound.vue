@@ -9,9 +9,6 @@
 <script>
 export default {
     name: 'notfound',
-    data() {
-        return {}
-    },
     methods: {
         goBack() {
             this.$router.go(-1)

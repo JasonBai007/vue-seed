@@ -29,7 +29,7 @@ export default {
     };
   },
   computed: {
-    isCollapse: function() {
+    isCollapse() {
       return this.$store.state.common.isCollapse;
     }
   },

@@ -10,14 +10,6 @@ export default {
     name: 'enrolllist',
     components: {
         Bg,
-    },
-    data() {
-        return {
-
-        }
-    },
-    methods: {
-
     }
 };
 </script>

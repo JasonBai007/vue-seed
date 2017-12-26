@@ -138,7 +138,7 @@ export default {
     }
   },
   watch: {
-    isMemery: function(n, o) {
+    isMemery(n, o) {
       if (n) {
         Cookies.set("userInfo", this.form.name, { expires: 7 });
         Cookies.set("passwordInfo", this.form.password, { expires: 7 });

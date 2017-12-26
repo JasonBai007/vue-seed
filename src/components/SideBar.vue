@@ -66,7 +66,7 @@ export default {
     };
   },
   computed: {
-    toggSiderBar: function() {
+    toggSiderBar() {
       return this.$store.state.common.isCollapse;
     }
   },

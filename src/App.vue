@@ -24,20 +24,14 @@ import 'directives/customTitle.js'
 import 'filters/handleNum.js'
 export default {
     name: 'app',
-    data() {
-        return {
-        }
-    },
     computed: {
-        isCollapse: function () {
+        isCollapse() {
             return this.$store.state.common.isCollapse
         }
     },
     components: {
         'top-bar': TopBar,
         'side-bar': SideBar,
-    },
-    methods: {
     }
 }
 </script>

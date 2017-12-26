@@ -17,8 +17,6 @@
 <script>
 export default {
   name: "projectinfo",
-  components: {},
-  mixins: [],
   data() {
     return {
         notes: [
@@ -38,8 +36,7 @@ export default {
             '切换路由时，vuex里的state不会跟着变，除非在导航守卫里提交mutations',
         ]
     };
-  },
-  methods: {}
+  }
 };
 </script>
 <style scoped lang="less">

@@ -7,9 +7,6 @@
 <script>
 export default {
   name: "tpl",
-  data() {
-    return {};
-  },
   computed: {
     isAdminAble() {
       let menu = JSON.parse(localStorage.menu);
@@ -40,6 +37,3 @@ export default {
   }
 };
 </script>
-<style scoped lang="less">
-
-</style>
