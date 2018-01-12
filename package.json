@@ -8,8 +8,7 @@
         "dev": "node build/dev-server.js",
         "clean": "rimraf preview/app",
         "build": "yarn run clean && node build/build.js",
-        "server": "cd preview && node server.js",
-        "release": "cp -r preview/app release"
+        "server": "cd preview && node server.js"
     },
     "dependencies": {
         "axios": "^0.16.2",
