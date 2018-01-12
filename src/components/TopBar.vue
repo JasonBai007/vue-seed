@@ -12,7 +12,7 @@
                         <a class="animated fadeIn">你好，{{userName}}</a>
                     </el-col>
                     <el-col :span="4">
-                        <a href="#" class="logout" @click="logout">退出</a>
+                        <a href="#" class="logout" @click.prevent="logout">退出</a>
                     </el-col>
                 </el-row>
             </el-col>

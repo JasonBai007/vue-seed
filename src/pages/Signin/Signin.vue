@@ -8,7 +8,7 @@
                     <el-input placeholder="用户名" v-model="form.name"></el-input>
                 </el-form-item>
                 <el-form-item prop="password">
-                    <el-input placeholder="密码" v-model="form.password"></el-input>
+                    <el-input placeholder="密码" v-model="form.password" type="password"></el-input>
                 </el-form-item>
                 <el-form-item>
                     <el-row type="flex" justify="space-between">
