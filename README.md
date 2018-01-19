@@ -1,5 +1,7 @@
 # Vue-Element-Admin
 ![](https://img.shields.io/travis/rust-lang/rust.svg)
+![](https://img.shields.io/badge/license-MIT-blue.svg)
+![](https://img.shields.io/badge/Prs-welcome-brightgreen.svg)
 
 ## Build Setup
 
