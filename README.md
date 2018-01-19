@@ -1,4 +1,5 @@
 # Vue-Element-Admin
+![](https://img.shields.io/travis/rust-lang/rust.svg)
 
 ## Build Setup
 
