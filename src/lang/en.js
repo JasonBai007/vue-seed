@@ -10,6 +10,10 @@ export const m = {
     info: 'please call 911',
     button: 'Login'
   },
+  topbar: {
+    sayHi: 'Hi',
+    logout: 'Logout'
+  },
   menu: {
     project: 'Projects',
     notes: 'Notes',

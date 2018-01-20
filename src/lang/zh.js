@@ -10,6 +10,10 @@ export const m = {
     info: '你咋忘不了吃呢？',
     button: '登录'
   },
+  topbar: {
+    sayHi: '嗨',
+    logout: '退出'
+  },
   menu: {
     project: '项目管理',
     notes: '开发备忘',

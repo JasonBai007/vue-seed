@@ -8,11 +8,14 @@
             </el-col>
             <el-col :span="6">
                 <el-row type="flex" class="row-bg" justify="end">
-                    <el-col :span="12">
-                        <a class="animated fadeIn">你好，{{userName}}</a>
-                    </el-col>
                     <el-col :span="4">
-                        <a href="#" class="logout" @click.prevent="logout">退出</a>
+                        <i class="fa fa-language" title="切换语言" @click="toggleLanguage"></i>
+                    </el-col>
+                    <el-col :span="12">
+                        <a class="animated fadeIn">{{$t('m.topbar.sayHi')}}，{{userName}}</a>
+                    </el-col>
+                    <el-col :span="5" style="text-align:center">
+                        <a href="#" class="logout" @click.prevent="logout">{{$t('m.topbar.logout')}}</a>
                     </el-col>
                 </el-row>
             </el-col>
@@ -20,36 +23,42 @@
     </div>
 </template>
 <script>
-import Cookies from "js-cookie";
+import Cookies from 'js-cookie'
 export default {
-  name: "topbar",
+  name: 'topbar',
   data() {
     return {
-      userName: localStorage.userName || ""
-    };
+      userName: localStorage.userName || ''
+    }
   },
   computed: {
     isCollapse() {
-      return this.$store.state.common.isCollapse;
+      return this.$store.state.common.isCollapse
     }
   },
   methods: {
     toggleSiderBar() {
-      this.$store.commit("toggleSiderBar");
+      this.$store.commit('toggleSiderBar')
+    },
+    toggleLanguage() {
+      let locale = this.$i18n.locale
+      locale === 'zh' ? (this.$i18n.locale = 'en') : (this.$i18n.locale = 'zh')
+      let info = locale === 'en' ?  '退出，查看登录页' : 'logout and see the login page'
+      this.$message.success(info)
     },
     logout() {
-      Cookies.set("isLogin", "0");
-      localStorage.clear();
-      this.$router.push("signin");
+      Cookies.set('isLogin', '0')
+      localStorage.clear()
+      this.$router.push('signin')
     }
   },
   watch: {
     $route(to, from) {
-      this.pathName = this.$route.path.substring(1);
-      this.nowPath = this.$route.path;
+      this.pathName = this.$route.path.substring(1)
+      this.nowPath = this.$route.path
     }
   }
-};
+}
 </script>
 <style scoped lang="less">
 #topbar-wrap {
@@ -84,7 +93,7 @@ export default {
   }
   .fa {
     font-size: 24px;
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
       cursor: pointer;
     }
@@ -111,6 +120,6 @@ export default {
   }
 }
 .fa.nav-rotate {
-  transform: rotate(90deg)
+  transform: rotate(90deg);
 }
 </style>
