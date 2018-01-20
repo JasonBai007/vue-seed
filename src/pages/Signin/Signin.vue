@@ -2,22 +2,22 @@
     <div class="bg">
         <div class="login-wrap animated flipInY" v-title="'Auto Vue'">
             <h3>Auto Vue</h3>
-            <h3>欢迎使用自动化<span>装逼</span>系统</h3>
+            <h3>{{$t('m.login.introduction')}}</h3>
             <el-form ref="form" :model="form" :rules="rules" label-width="0px">
                 <el-form-item prop="name">
-                    <el-input placeholder="用户名" v-model="form.name"></el-input>
+                    <el-input :placeholder="$t('m.login.name_holder')" v-model="form.name"></el-input>
                 </el-form-item>
                 <el-form-item prop="password">
-                    <el-input placeholder="密码" v-model="form.password" type="password"></el-input>
+                    <el-input :placeholder="$t('m.login.password_holder')" v-model="form.password" type="password"></el-input>
                 </el-form-item>
                 <el-form-item>
                     <el-row type="flex" justify="space-between">
-                        <el-checkbox v-model="isMemery" style="color:#eee">记住密码</el-checkbox>
-                        <a href="" @click.prevent="openMsg"  style="color:#eee">忘记密码？</a>
+                        <el-checkbox v-model="isMemery" style="color:#eee">{{$t('m.login.remember')}}</el-checkbox>
+                        <a href="" @click.prevent="openMsg"  style="color:#eee">{{$t('m.login.forget')}}</a>
                     </el-row>
                 </el-form-item>
                 <el-form-item>
-                    <el-button type="primary" @click="Login('form')">登 录</el-button>
+                    <el-button type="primary" @click="Login('form')">{{$t('m.login.button')}}</el-button>
                 </el-form-item>
             </el-form>
         </div>
@@ -81,7 +81,7 @@ export default {
         name: [
           {
             required: true,
-            message: "请输入用户名",
+            message: this.$t('m.login.name_tip'),
             trigger: "blur",
             // validator: checkone
           }
@@ -89,7 +89,7 @@ export default {
         password: [
           {
             required: true,
-            message: "请输入密码",
+            message: this.$t('m.login.password_tip'),
             trigger: "blur"
           }
         ]
@@ -134,7 +134,8 @@ export default {
       });
     },
     openMsg() {
-      this.$message.warning("你咋忘不了吃呢？");
+      // 注意这里使用了国际化
+      this.$message.warning(this.$t('m.login.info'));
     }
   },
   watch: {

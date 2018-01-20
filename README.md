@@ -28,6 +28,7 @@ open http://localhost:3000/index.html
 ## Tech Stack
 * Vue @ 2.5.9
 * Vue-Router
+* Vue-i18n
 * Vuex
 * Axios
 * jsonp
