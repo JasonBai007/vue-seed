@@ -8,17 +8,17 @@
                 <el-submenu v-if="item.children.length !== 0" :index="item.router" :key="item.router">
                     <template slot="title">
                         <i :class="item.icon"></i>
-                        <span slot="title">{{item.name}}</span>
+                        <span slot="title">{{langType === 'en'? item.name_en: item.name}}</span>
                     </template>
                     <el-menu-item v-for="child in item.children" :index="child.router" :key="child.router">
                         <i :class="child.icon"></i>
-                        <span slot="title">{{child.name}}</span>
+                        <span slot="title">{{langType === 'en'? child.name_en: child.name}}</span>
                     </el-menu-item>
                 </el-submenu>
 
                 <el-menu-item v-else :index="item.router" :key="item.router">
                     <i :class="item.icon"></i>
-                    <span slot="title">{{item.name}}</span>
+                    <span slot="title">{{langType === 'en'? item.name_en: item.name}}</span>
                 </el-menu-item>
 
             </template>
@@ -68,6 +68,9 @@ export default {
   computed: {
     toggSiderBar() {
       return this.$store.state.common.isCollapse;
+    },
+    langType() {
+      return this.$i18n.locale
     }
   },
   created() {
@@ -77,13 +80,6 @@ export default {
     initRythm() {
       rythm.setMusic(music);
       rythm.addRythm("twist1", "twist", 0, 10);
-      rythm.addRythm("jump1", "jump", 0, 10);
-      rythm.addRythm("swing1", "swing", 0, 10);
-      rythm.addRythm("vanish1", "vanish", 0, 10);
-      rythm.addRythm("shake2", "shake", 150, 40, {
-        min: 0,
-        max: 20
-      });
       rythm.addRythm("pulse3", "pulse", 0, 10, {
         min: 0.75,
         max: 1.5

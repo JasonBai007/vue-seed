@@ -2,7 +2,7 @@
 <!-- 使用说明：<top-bar></top-bar> -->
 <template>
     <div id="topbar-wrap" :class="{ topCollapsed: isCollapse }">
-        <el-row type="flex" justify="space-between" class="rythm shake2">
+        <el-row type="flex" justify="space-between">
             <el-col :span="5">
                 <i :class="[isCollapse? 'nav-rotate': '','fa fa-bars']" @click="toggleSiderBar"></i>
             </el-col>
@@ -11,7 +11,7 @@
                     <el-col :span="4">
                         <i class="fa fa-language" title="切换语言" @click="toggleLanguage"></i>
                     </el-col>
-                    <el-col :span="12">
+                    <el-col :span="10">
                         <a class="animated fadeIn">{{$t('m.topbar.sayHi')}}，{{userName}}</a>
                     </el-col>
                     <el-col :span="5" style="text-align:center">
@@ -43,7 +43,7 @@ export default {
     toggleLanguage() {
       let locale = this.$i18n.locale
       locale === 'zh' ? (this.$i18n.locale = 'en') : (this.$i18n.locale = 'zh')
-      let info = locale === 'en' ?  '退出，查看登录页' : 'logout and see the login page'
+      let info = locale === 'en' ?  '切换成功' : 'change language successfully'
       this.$message.success(info)
     },
     logout() {

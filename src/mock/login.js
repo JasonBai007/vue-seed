@@ -13,29 +13,35 @@ if (debug) {
         "data": {
             menu: [{
                 name: '项目管理',
+                name_en: 'Projects',
                 router: '',
                 icon: 'el-icon-time',
                 children: [{
                     name: '开发备忘',
+                    name_en: 'Notes',
                     router: '/project-info',
                     icon: 'el-icon-date'
                 }, {
                     name: '关于作者',
+                    name_en: 'About',
                     router: '/enroll-list',
                     icon: 'el-icon-document'
                 }]
             }, {
                 name: '天气预报',
+                name_en: 'Weather',
                 router: '/weather',
                 icon: 'el-icon-picture-outline',
                 children: []
             }, {
                 name: '魔幻立方',
+                name_en: 'Cube',
                 router: '/cube',
                 icon: 'el-icon-menu',
                 children: []
             }, {
                 name: '权限测试',
+                name_en: 'Authority',
                 router: '/authority-test',
                 icon: 'el-icon-setting',
                 children: []
