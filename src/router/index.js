@@ -3,22 +3,22 @@ import Router from 'vue-router'
 import Cookies from 'js-cookie'
 
 // 登录
-const Signin = resolve => require(['pages/Signin/Signin'], resolve)
+const Signin = resolve => require(['@/views/Signin/Signin'], resolve)
 
 // 项目信息
-const ProjectInfo = resolve => require(['pages/ProjectInfo/ProjectInfo'], resolve)
+const ProjectInfo = resolve => require(['@/views/ProjectInfo/ProjectInfo'], resolve)
 
 // 报名列表
-const EnrollList = resolve => require(['pages/EnrollList/EnrollList'], resolve)
+const EnrollList = resolve => require(['@/views/EnrollList/EnrollList'], resolve)
 
 // 天气预报
-const Weather = resolve => require(['pages/Weather/Weather'], resolve)
+const Weather = resolve => require(['@/views/Weather/Weather'], resolve)
 // 立方体
-const Cube = resolve => require(['pages/Cube/Cube'], resolve)
+const Cube = resolve => require(['@/views/Cube/Cube'], resolve)
 // 权限测试
-const AuthorityTest = resolve => require(['pages/AuthorityTest/AuthorityTest'], resolve)
+const AuthorityTest = resolve => require(['@/views/AuthorityTest/AuthorityTest'], resolve)
 // 404
-const Notfound = resolve => require(['pages/Notfound/Notfound'], resolve)
+const Notfound = resolve => require(['@/views/Notfound/Notfound'], resolve)
 
 Vue.use(Router)
 

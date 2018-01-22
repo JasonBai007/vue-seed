@@ -22,6 +22,7 @@ export default {
       let menu = JSON.parse(localStorage.menu);
       menu[0].children.push({
         name: "关于作者",
+        name_en: 'About',
         router: "/enroll-list",
         icon: "el-icon-document"
       });
