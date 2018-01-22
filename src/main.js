@@ -8,6 +8,7 @@ import Cookies from 'js-cookie'
 import store from './store'
 import VueParticles from 'vue-particles'
 import i18n from './lang' // Internationalization
+import * as utils from '@/utils'
 import 'font-awesome/less/font-awesome.less'
 import {
   Autocomplete,
