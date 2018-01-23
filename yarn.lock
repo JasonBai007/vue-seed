@@ -3647,6 +3647,10 @@ schema-utils@^0.3.0:
   dependencies:
     ajv "^5.0.0"
 
+screenfull@^3.3.2:
+  version "3.3.2"
+  resolved "http://registry.npm.taobao.org/screenfull/download/screenfull-3.3.2.tgz#a6adf3b3f5556da812725385880600f5b39fbf25"
+
 "semver@2 || 3 || 4 || 5", semver@^5.1.0, semver@^5.3.0:
   version "5.4.1"
   resolved "http://registry.npm.taobao.org/semver/download/semver-5.4.1.tgz#e059c09d8571f0540823733433505d3a2f00b18e"

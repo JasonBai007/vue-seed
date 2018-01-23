@@ -6,16 +6,19 @@
             <el-col :span="5">
                 <i :class="[isCollapse? 'nav-rotate': '','fa fa-bars']" @click="toggleSiderBar"></i>
             </el-col>
-            <el-col :span="6">
-                <el-row type="flex" class="row-bg" justify="end">
-                    <el-col :span="4">
-                        <i class="fa fa-language" title="切换语言" @click="toggleLanguage"></i>
-                    </el-col>
-                    <el-col :span="10">
+            <el-col :span="12">
+                <el-row type="flex" class="row-right" justify="end">
+                    <el-col :span="5">
                         <a class="animated fadeIn">{{$t('m.topbar.sayHi')}}，{{userName}}</a>
                     </el-col>
-                    <el-col :span="5" style="text-align:center">
-                        <a href="#" class="logout" @click.prevent="logout">{{$t('m.topbar.logout')}}</a>
+                    <el-col :span="2">
+                        <i class="fa fa-language" title="切换语言" @click="toggleLanguage"></i>
+                    </el-col>
+                    <el-col :span="2">
+                        <i class="fa fa-arrows-alt" title="切换全屏" @click="toggleFullscreen"></i>
+                    </el-col>
+                    <el-col :span="3">
+                        <i class="fa fa-sign-out logout" title="退出" @click.prevent="logout"></i>
                     </el-col>
                 </el-row>
             </el-col>
@@ -23,6 +26,7 @@
     </div>
 </template>
 <script>
+import screenfull from 'screenfull'
 import Cookies from 'js-cookie'
 export default {
   name: 'topbar',
@@ -43,8 +47,18 @@ export default {
     toggleLanguage() {
       let locale = this.$i18n.locale
       locale === 'zh' ? (this.$i18n.locale = 'en') : (this.$i18n.locale = 'zh')
-      let info = locale === 'en' ?  '切换成功' : 'change language successfully'
+      let info = locale === 'en' ? '切换成功' : 'change language successfully'
       this.$message.success(info)
+    },
+    toggleFullscreen() {
+      if (!screenfull.enabled) {
+        this.$message({
+          message: '您的浏览器不支持全屏',
+          type: 'warning'
+        })
+        return false
+      }
+      screenfull.toggle()
     },
     logout() {
       Cookies.set('isLogin', '0')
@@ -113,13 +127,16 @@ export default {
     line-height: 60px;
   }
   .logout {
-    color: #bfcbd9;
+    color: #fff;
     &:hover {
-      color: #fff;
+      color: #20a0ff;
     }
   }
 }
 .fa.nav-rotate {
   transform: rotate(90deg);
+}
+.row-right > div {
+  text-align: center;
 }
 </style>

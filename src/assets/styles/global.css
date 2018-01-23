@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #f3f3f4;
+}
+body #app {
+  height: 100%;
+}
+body #app .con-wrap {
+  padding-left: 160px;
+  transition: all 0.3s;
+}
+body #app .con-wrap h3 {
+  margin-top: 0;
+  color: #324157;
+}
+body #app .con-wrap .page-component-wrap {
+  padding: 15px;
+}
+body #app .con-wrap.conCollapse {
+  padding-left: 64px;
+  transition: all 0.3s;
+}
+.el-menu {
+  width: 100%;
+}
+.el-menu-item [class^='el-icon-'] {
+  vertical-align: middle;
+  color: #ddd;
+}
+.el-submenu [class^='el-icon-'] {
+  color: #ddd;
+}
+.el-submenu__title i {
+  vertical-align: middle;
+  color: #ddd;
+}
+.required-self label.el-form-item__label:before {
+  content: '*';
+  color: #ff4949;
+  margin-right: 4px;
+}
+#sidebar-wrap ul ul li {
+  background: #283446 !important;
+}
+#sidebar-wrap ul ul li:hover {
+  background: #48576a !important;
+}

@@ -14,22 +14,20 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      vue$: 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'bus': resolve('src/bus'),
-      'comp': resolve('src/components'),
-      'mock': resolve('src/mock'),
-      'directives': resolve('src/directives'),
-      'filters': resolve('src/filters'),
-      'mixins': resolve('src/mixins'),
-      'pages': resolve('src/pages')
+      bus: resolve('src/bus'),
+      comp: resolve('src/components'),
+      mock: resolve('src/mock'),
+      directives: resolve('src/directives'),
+      filters: resolve('src/filters'),
+      mixins: resolve('src/mixins'),
+      pages: resolve('src/pages')
     }
   },
   module: {

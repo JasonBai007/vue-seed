@@ -42,6 +42,7 @@ open http://localhost:3000/index.html
 * MomentJS
 * Font-Awesome
 * js-cookie
+* screenfull
 * MockJS
 * Yarn
 
