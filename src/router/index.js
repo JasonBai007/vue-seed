@@ -43,6 +43,7 @@ const router = new Router({
         requireAuth: true
       },
       component: Layout,
+      redirect: '/project-info', //重定向到第一个子路由，否则只渲染Layout组件
       children: [
         {
           path: 'project-info',
