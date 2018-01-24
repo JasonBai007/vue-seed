@@ -131,7 +131,7 @@ axios.interceptors.response.use(
         case 401:
           // 清除token信息并跳转到登录页面
           Cookies.set('isLogin', '0')
-          router.replace('login')
+          router.replace('/signin')
       }
     }
     return Promise.reject(error.response.data) // 返回接口返回的错误信息
