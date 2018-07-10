@@ -7,7 +7,8 @@
     "scripts": {
         "dev": "node build/dev-server.js",
         "build": "node build/build.js",
-        "analysis": "npm run build --report"
+        "analysis": "npm run build --report",
+        "copy": "cp -r ./dist/* docs"
     },
     "dependencies": {
         "axios": "^0.16.2",
