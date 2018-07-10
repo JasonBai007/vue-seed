@@ -38,7 +38,7 @@ http-server
 * eCharts @ 3.7.2
 * Vue-cli
 * ES6
-* Element-UI @ 2.0.7
+* Element-UI @ 2.4.3
 * Flex
 * Less
 * Animate.CSS
