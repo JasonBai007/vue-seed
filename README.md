@@ -19,6 +19,9 @@ yarn run build
 # visualize output files
 yarn run analysis
 
+# copy output files to docs folder
+yarn run copy
+
 # preview output files
 yarn add http-server -g
 cd dist
