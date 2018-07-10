@@ -1,6 +1,6 @@
 <template>
     <div id="wrapper" ref="wrapper">
-        <img src="../assets/img/wechat.jpg">
+        <img src="../../static/img/wechat.jpg">
     </div>
 </template>
 <script>

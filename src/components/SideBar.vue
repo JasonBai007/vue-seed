@@ -46,14 +46,14 @@
                 </el-menu-item> -->
         </el-menu>
         <div class="animated bounceInDown imgWrap">
-            <img src="../assets/img/little.gif" height="60px" class="gif rythm pulse3"  @click="startDance">
+            <img src="../../static/img/little.gif" height="60px" class="gif rythm pulse3"  @click="startDance">
         </div>
     </div>
 </template>
 <script>
 import Rythm from "rythm.js";
 const rythm = new Rythm();
-const music = require("../assets/audio/romeostune.mp3");
+const music = require("../../static/audio/romeostune.mp3");
 
 export default {
   name: "sidebar",

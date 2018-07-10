@@ -43,7 +43,6 @@
     </div>
 </template>
 <script>
-import "mock/login.js";
 import Cookies from "js-cookie";
 export default {
   name: "signin",
@@ -159,7 +158,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/img/sky.jpg');
+    background-image: url('../../../static/img/sky.jpg');
     background-position: -20% 10%;
     background-size: contain;
     #particles-js {
