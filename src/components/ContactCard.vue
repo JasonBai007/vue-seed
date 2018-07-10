@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: "bg",
+  name: "contactCard",
   data() {
     return {};
   },
