@@ -13,16 +13,16 @@ yarn install
 # serve with hot reload at localhost:8080
 yarn run dev
 
-# clean old files
-yarn run clean
-
 # build for production with minification
 yarn run build
 
-# preview the file
-yarn run server
-open http://localhost:3000/index.html
+# visualize output files
+yarn run analysis
 
+# preview output files
+yarn add http-server -g
+cd dist
+http-server
 ```
 
 ## Tech Stack

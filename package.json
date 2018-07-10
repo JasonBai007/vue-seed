@@ -6,9 +6,8 @@
     "private": true,
     "scripts": {
         "dev": "node build/dev-server.js",
-        "clean": "rimraf preview/app",
-        "build": "yarn run clean && node build/build.js",
-        "server": "cd preview && node server.js"
+        "build": "node build/build.js",
+        "analysis": "npm run build --report"
     },
     "dependencies": {
         "axios": "^0.16.2",
