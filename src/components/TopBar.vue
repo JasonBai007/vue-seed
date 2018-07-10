@@ -83,7 +83,6 @@ export default {
   padding: 0 15px;
   z-index: 4;
   box-sizing: border-box;
-  transition: all 0.3s;
   .logo {
     color: #fff;
     font-weight: bold;

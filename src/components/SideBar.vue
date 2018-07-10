@@ -2,7 +2,7 @@
 <!-- 使用说明：<side-bar></side-bar> -->
 <template>
     <div id="sidebar-wrap" :class="{ collapsed: toggSiderBar }">
-        <h3 class="logo rythm twist1">AUTO VUE</h3>
+        <h3 class="logo rythm twist1">{{toggSiderBar ? 'VUE': 'AUTO VUE'}}</h3>
         <el-menu background-color="#324157" text-color="#ddd" :default-active="$route.path" :unique-opened="isUnique" :router="isRouter" mode="vertical" :collapse="toggSiderBar">
             <template v-for="item in menu">
                 <el-submenu v-if="item.children.length !== 0" :index="item.router" :key="item.router">
@@ -51,51 +51,51 @@
     </div>
 </template>
 <script>
-import Rythm from "rythm.js";
-const rythm = new Rythm();
-const music = require("../../static/audio/romeostune.mp3");
+import Rythm from 'rythm.js'
+const rythm = new Rythm()
+const music = require('../../static/audio/romeostune.mp3')
 
 export default {
-  name: "sidebar",
+  name: 'sidebar',
   data() {
     return {
       isMusicOn: false,
       isUnique: true,
       isRouter: true,
       menu: localStorage.menu ? JSON.parse(localStorage.menu) : []
-    };
+    }
   },
   computed: {
     toggSiderBar() {
-      return this.$store.state.common.isCollapse;
+      return this.$store.state.common.isCollapse
     },
     langType() {
       return this.$i18n.locale
     }
   },
   created() {
-    this.initRythm();
+    this.initRythm()
   },
   methods: {
     initRythm() {
-      rythm.setMusic(music);
-      rythm.addRythm("twist1", "twist", 0, 10);
-      rythm.addRythm("pulse3", "pulse", 0, 10, {
+      rythm.setMusic(music)
+      rythm.addRythm('twist1', 'twist', 0, 10)
+      rythm.addRythm('pulse3', 'pulse', 0, 10, {
         min: 0.75,
         max: 1.5
-      });
+      })
     },
     startDance() {
       if (this.isMusicOn) {
-        this.isMusicOn = false;
-        rythm.stop();
+        this.isMusicOn = false
+        rythm.stop()
       } else {
-        this.isMusicOn = true;
-        rythm.start();
+        this.isMusicOn = true
+        rythm.start()
       }
     }
   }
-};
+}
 </script>
 <style scoped lang="less">
 #sidebar-wrap {
@@ -105,9 +105,7 @@ export default {
   left: 0;
   top: 0;
   bottom: 0;
-  background: #324157;
   z-index: 5;
-  transition: all 0.3s;
 
   /* 图标动画 */
   .imgWrap {
@@ -127,14 +125,18 @@ export default {
   .logo {
     color: #fff;
     text-align: center;
-    margin: 18px 0;
+    background: #324157;
+    padding: 18px 0;
+    margin: 0;
   }
 }
 
 // 动态改变左侧导航包裹层宽度
 #sidebar-wrap.collapsed {
   width: 64px;
-  transition: all 0.3s;
+}
+.el-menu {
+  height: 100%;
 }
 
 // 美化左侧导航的留白
