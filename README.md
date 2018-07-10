@@ -81,6 +81,8 @@ http-server
 
 ## Screen Shot
 
+0、文件地图
+![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/map.png)
 1、登录页
 ![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/login.jpg)
 2、气象页
