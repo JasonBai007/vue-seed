@@ -45,7 +45,7 @@ http-server
 * screenfull
 * MockJS
 * Yarn
-* babel-polyfill 兼容垫片
+* babel-polyfill 兼容IE垫片
 
 ## Others Maybe Need
 * vue-qr  二维码生成模块
@@ -71,17 +71,23 @@ http-server
 | dist | 打包后的文件所在目录 |
 | screenshot | github上README页面上的预览图片，可删除 |
 
-## Best Practice
-* 安装或删除模块请使用Yarn命令 ！！！！！！！！
-* 安装依赖包：Yarn add XXX
-* 安装依赖包：Yarn upgrade XXX@x.x.x
-* 卸载依赖包：Yarn remove XXX
-* 所有组件文件名首字母大写
-* 公共组件请放到components文件夹下
-* 代码缩进采用2个空格
+## Login Logic
+1. 请求登录接口，获取到token、用户ID等信息，保存到localStorage或Cookie里
+2. 请求左侧菜单信息。（如果菜单是固定的，这步忽略）
+3. 登录成功后，导航到首页
+4. 在main.js里设置全局请求拦截，在所有请求的header里加上token信息，正面当前已登录
+5. 在main.js里设置全局接收拦截，如果服务器端的token已过期，返回401，就清空localStorage并重定向到登录页面
+6. 在路由配置表里，设置全局路由拦截，如果token存在并且要去往登录页面，就不让去，并且重定向到首页
+
+## Logout Logic
+1. 点击退出按钮，清空localStorage，并导航到登录页面
+
+## First Open Logic
+1. 配置路由表，'/'重定向到首页
+2. 如果没有登录（本地没有token），首页的请求就会是401，这时候，就会导航到登录页
+3. 如果已经登录过，本地有token，就待在首页，不用再登录一遍了
 
 ## Change Log
-
 2018-07-15
 * 更新Readme
 * 优化登录登出逻辑
