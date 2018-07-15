@@ -56,6 +56,10 @@ http-server
 * dayjs 日期处理模块
 * rythm.js 音频节奏可视化模块
 
+## Notes
+1. 登录页已兼容IE浏览器
+2. 由于引入了rythm.js，导致其它页面不兼容IE，使用时，删除Siderbar.vue里面关于rythm.js的代码就可以了
+
 ## Useful Links
 * [饿了么组件](http://element.eleme.io/#/zh-CN/component/installation)
 * [Vue官网](https://cn.vuejs.org/v2/guide/)
