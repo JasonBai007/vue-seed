@@ -27,7 +27,6 @@
 </template>
 <script>
 import screenfull from 'screenfull'
-import Cookies from 'js-cookie'
 export default {
   name: 'topbar',
   data() {
@@ -61,7 +60,6 @@ export default {
       screenfull.toggle()
     },
     logout() {
-      Cookies.set('isLogin', '0')
       localStorage.clear()
       this.$router.push('signin')
     }

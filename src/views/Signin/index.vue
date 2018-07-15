@@ -43,7 +43,6 @@
     </div>
 </template>
 <script>
-import Cookies from "js-cookie";
 export default {
   name: "signin",
   data() {
@@ -72,8 +71,8 @@ export default {
     // };
     return {
       form: {
-        name: Cookies.get("userInfo") || "admin",
-        password: Cookies.get("passwordInfo") || "654321"
+        name: localStorage.userInfo || "admin",
+        password: localStorage.passwordInfo || "654321"
       },
       isMemery: false,
       rules: {
@@ -96,8 +95,6 @@ export default {
     };
   },
   created() {
-    // Cookies.set("XSRF-TOKEN", "thisistoken", { expires: 7 });
-    Cookies.set("isLogin", "0", { expires: 7 });
   },
   methods: {
     Login(formName) {
@@ -113,7 +110,7 @@ export default {
           }).then(res => {
             localStorage.userName = res.data.data.userName;
             localStorage.userId = res.data.data.userId;
-            Cookies.set("isLogin", "1", { expires: 7 });
+            localStorage.token = res.data.data.token;
             this.getMenu();
           });
         } else {
@@ -140,11 +137,11 @@ export default {
   watch: {
     isMemery(n, o) {
       if (n) {
-        Cookies.set("userInfo", this.form.name, { expires: 7 });
-        Cookies.set("passwordInfo", this.form.password, { expires: 7 });
+        localStorage.userInfo = this.form.name
+        localStorage.passwordInfo = this.form.password
       } else {
-        Cookies.remove("userInfo");
-        Cookies.remove("passwordInfo");
+        localStorage.removeItem('userInfo')
+        localStorage.removeItem('passwordInfo')
       }
     }
   }
