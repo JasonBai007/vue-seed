@@ -31,29 +31,30 @@ http-server
 ## Tech Stack
 * Vue @ 2.5.9
 * Vue-Router
+* Vue-cli
 * Vue-i18n
 * Vuex
+* ES6
 * Axios
 * jsonp
 * eCharts @ 3.7.2
-* Vue-cli
-* ES6
 * Element-UI @ 2.4.3
-* Flex
 * Less
 * Animate.CSS
-* MomentJS
 * Font-Awesome
-* js-cookie
 * screenfull
 * MockJS
 * Yarn
+* babel-polyfill 兼容垫片
 
 ## Others Maybe Need
-* vue-qr  二维码生成插件
+* vue-qr  二维码生成模块
 * vuedraggable  拖拽功能
 * vue-particles  粒子星空效果
 * xlsx  读取excel表
+* js-cookie 读写cookie模块
+* dayjs 日期处理模块
+* rythm.js 音频节奏可视化模块
 
 ## Useful Links
 * [饿了么组件](http://element.eleme.io/#/zh-CN/component/installation)
@@ -80,6 +81,12 @@ http-server
 * 代码缩进采用2个空格
 
 ## Change Log
+
+2018-07-15
+* 更新Readme
+* 优化登录登出逻辑
+* 删除多余模块
+
 2018-07-10
 * 优化打包生成目录
 * 实现打包文件可视化
