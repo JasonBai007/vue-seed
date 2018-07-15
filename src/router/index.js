@@ -73,7 +73,7 @@ const router = new Router({
         // 最后是404页面
         {
             path: '*',
-            meta: { requireAuth: true },
+            meta: { requireAuth: false },
             component: Notfound
         }
     ]
