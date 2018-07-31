@@ -60,6 +60,7 @@ http-server
 1. 登录页已兼容IE浏览器
 2. 由于引入了rythm.js，导致其它页面不兼容IE，使用时，删除Siderbar.vue里面关于rythm.js的代码就可以了
 3. 配置webpack.base.conf.js中的alias的vue字段，可以解决IE浏览器中的报错问题。（这块儿不用动了，已调整好）
+4. 背景音乐的歌名是：Romeo's Tune
 
 ## Useful Links
 * [饿了么组件](http://element.eleme.io/#/zh-CN/component/installation)
