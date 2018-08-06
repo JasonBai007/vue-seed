@@ -27,6 +27,7 @@
 </template>
 <script>
 import screenfull from 'screenfull'
+import bus from '@/bus'
 export default {
   name: 'topbar',
   data() {
@@ -61,6 +62,7 @@ export default {
     },
     logout() {
       localStorage.clear()
+      bus.$emit('stopMusic')
       this.$router.push('signin')
     }
   },

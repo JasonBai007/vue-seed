@@ -42,7 +42,8 @@ const router = new Router({
                 requireAuth: true
             },
             component: Layout,
-            redirect: '/project-info', //重定向到第一个子路由，否则只渲染Layout组件
+            // redirect: '/project-info', // 重定向到第一个子路由，否则只渲染Layout组件，这块儿使用时解除注释
+            redirect: '/signin', // 这里重定向到登录页面，是为了展示使用，实际用这个项目开发时，需要注释这行，解除上一行的注释
             children: [{
                     path: 'project-info',
                     meta: { requireAuth: true },
