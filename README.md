@@ -48,6 +48,7 @@ http-server
 * babel-polyfill 兼容IE垫片
 
 ## Others Maybe Need
+* intro.js 引导页
 * vue-qr  二维码生成模块
 * vuedraggable  拖拽功能
 * vue-particles  粒子星空效果
