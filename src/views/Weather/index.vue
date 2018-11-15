@@ -42,7 +42,7 @@
 </template>
 <script>
 // 引入城市列表
-import arr from "../../assets/json/cityList.json";
+import arr from "../../assets/json/citylist.json";
 // 引入自己写的折线图组件
 import lineChart from "comp/charts/Line";
 // 引入支持jsonp的库 https://github.com/webmodules/jsonp
