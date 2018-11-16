@@ -56,6 +56,9 @@ http-server
 * js-cookie 读写cookie模块
 * dayjs 日期处理模块
 * rythm.js 音频节奏可视化模块
+* vuescroll.js 一个滚动条插件
+* crypto-js 加密算法，登录时使用
+* clipboard.js 复制粘贴
 
 ## Notes
 1. 登录页已兼容IE浏览器
@@ -69,6 +72,7 @@ http-server
 * [axios官网](https://github.com/mzabriskie/axios)
 * [Vue-loader使用指南](http://vue-loader.vuejs.org/en/)
 * [Vue-cli使用指南](http://vuejs-templates.github.io/webpack/)
+* [一位大神的vue项目搭建干货总结](https://linjinze999.github.io/vue-llplatform/)
 
 ## Folder Instructions
 | Name | Remark |
