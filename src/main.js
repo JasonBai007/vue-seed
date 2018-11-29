@@ -14,93 +14,14 @@ import 'font-awesome/less/font-awesome.less'
 import 'directives/customTitle.js'
 // 在入口处引入模拟的假数据
 import '@/mock'
+// 引入完整的饿了么组件库
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 
-// 这里只引入了部分饿了么组件
-import {
-    Autocomplete,
-    Dropdown,
-    DropdownMenu,
-    DropdownItem,
-    Menu,
-    Submenu,
-    MenuItem,
-    MenuItemGroup,
-    Input,
-    InputNumber,
-    Radio,
-    RadioGroup,
-    RadioButton,
-    Checkbox,
-    CheckboxGroup,
-    Switch,
-    Select,
-    Option,
-    OptionGroup,
-    Button,
-    ButtonGroup,
-    Popover,
-    Tooltip,
-    Form,
-    FormItem,
-    Tabs,
-    TabPane,
-    Tag,
-    Icon,
-    Row,
-    Col,
-    Card,
-    Rate,
-    Cascader,
-    Loading,
-    MessageBox,
-    Message,
-} from 'element-ui'
-
-Vue.use(Autocomplete)
-Vue.use(Dropdown)
-Vue.use(DropdownMenu)
-Vue.use(DropdownItem)
-Vue.use(Menu)
-Vue.use(Submenu)
-Vue.use(MenuItem)
-Vue.use(MenuItemGroup)
-Vue.use(Input)
-Vue.use(InputNumber)
-Vue.use(Radio)
-Vue.use(RadioGroup)
-Vue.use(RadioButton)
-Vue.use(Checkbox)
-Vue.use(CheckboxGroup)
-Vue.use(Switch)
-Vue.use(Select)
-Vue.use(Option)
-Vue.use(OptionGroup)
-Vue.use(Button)
-Vue.use(ButtonGroup)
-Vue.use(Popover)
-Vue.use(Tooltip)
-Vue.use(Form)
-Vue.use(FormItem)
-Vue.use(Tabs)
-Vue.use(TabPane)
-Vue.use(Tag)
-Vue.use(Icon)
-Vue.use(Row)
-Vue.use(Col)
-Vue.use(Card)
-Vue.use(Rate)
-Vue.use(Cascader)
-
-Vue.use(Loading.directive)
-
-Vue.prototype.$loading = Loading.service
-Vue.prototype.$msgbox = MessageBox
-Vue.prototype.$confirm = MessageBox.confirm
-Vue.prototype.$prompt = MessageBox.prompt
-Vue.prototype.$message = Message
-Vue.prototype.$axios = axios
 Vue.use(VueParticles)
 
+Vue.prototype.$axios = axios
 // Vue 的全局配置
 Vue.config.productionTip = false
 
