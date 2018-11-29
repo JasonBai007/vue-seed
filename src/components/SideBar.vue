@@ -5,7 +5,7 @@
         <h3 class="logo">
           <span class="rythm twist1">{{toggSiderBar ? 'VUE': 'AUTO VUE'}}</span>
         </h3>
-        <el-menu background-color="#324157" text-color="#ddd" :default-active="$route.path" :unique-opened="isUnique" :router="isRouter" mode="vertical" :collapse="toggSiderBar">
+        <el-menu background-color="#324157" text-color="#ddd" :default-active="$route.path" :unique-opened="true" :router="true" mode="vertical" :collapse="toggSiderBar">
             <template v-for="item in menu">
                 <el-submenu v-if="item.children.length !== 0" :index="item.router" :key="item.router">
                     <template slot="title">
@@ -63,8 +63,6 @@ export default {
   data() {
     return {
       isMusicOn: false,
-      isUnique: true,
-      isRouter: true,
       menu: localStorage.menu ? JSON.parse(localStorage.menu) : []
     };
   },

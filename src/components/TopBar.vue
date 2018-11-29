@@ -15,7 +15,7 @@
                         <i class="fa fa-language" title="切换语言" @click="toggleLanguage"></i>
                     </el-col>
                     <el-col :span="2">
-                        <i class="fa fa-arrows-alt" title="切换全屏" @click="toggleFullscreen"></i>
+                        <i :class="[isFullscreen? 'fa-compress': 'fa-arrows-alt','fa ']" title="切换全屏" @click="toggleFullscreen"></i>
                     </el-col>
                     <el-col :span="3">
                         <i class="fa fa-sign-out logout" title="退出" @click.prevent="logout"></i>
@@ -32,7 +32,8 @@ export default {
   name: 'topbar',
   data() {
     return {
-      userName: localStorage.userName || ''
+      userName: localStorage.userName || '',
+      isFullscreen: false
     }
   },
   computed: {
@@ -52,13 +53,12 @@ export default {
     },
     toggleFullscreen() {
       if (!screenfull.enabled) {
-        this.$message({
-          message: '您的浏览器不支持全屏',
-          type: 'warning'
-        })
+        this.$message.warning('您的浏览器不支持全屏')
         return false
       }
       screenfull.toggle()
+      // isFullscreen 居然是反的
+      this.isFullscreen = !screenfull.isFullscreen
     },
     logout() {
       localStorage.clear()
