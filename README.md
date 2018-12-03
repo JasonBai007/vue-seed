@@ -59,6 +59,7 @@ http-server
 * vuescroll.js 一个滚动条插件
 * crypto-js 加密算法，登录时使用
 * clipboard.js 复制粘贴
+* vue-baidu-map 封装的百度地图插件
 
 ## Notes
 1. 登录页已兼容IE浏览器
