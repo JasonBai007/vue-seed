@@ -12,6 +12,7 @@ body #app {
 }
 body #app .con-wrap {
   padding-left: 160px;
+  transition: all 0.5s;
 }
 body #app .con-wrap h3 {
   margin-top: 0;
@@ -22,6 +23,7 @@ body #app .con-wrap .page-component-wrap {
 }
 body #app .con-wrap.conCollapse {
   padding-left: 64px;
+  transition: all 0.5s;
 }
 .el-menu {
   width: 100%;

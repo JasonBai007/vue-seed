@@ -98,16 +98,9 @@ export default {
   .name {
     font-weight: 600;
   }
-  .el-icon-setting {
-    transition: 1s;
-    &:hover {
-      transform: rotate(180deg);
-      cursor: pointer;
-    }
-  }
   .fa {
     font-size: 24px;
-    transition: all 0.3s;
+    transition: all 0.5s;
     &:hover {
       cursor: pointer;
     }
