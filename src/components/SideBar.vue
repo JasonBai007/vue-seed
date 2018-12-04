@@ -5,7 +5,7 @@
         <h3 class="logo">
           <span class="rythm twist1">{{toggSiderBar ? 'VUE': 'AUTO VUE'}}</span>
         </h3>
-        <el-menu background-color="#324157" text-color="#ddd" :default-active="$route.path" :unique-opened="true" :router="true" mode="vertical" :collapse="toggSiderBar">
+        <el-menu background-color="#353d47" text-color="#fff" :default-active="$route.path" :unique-opened="true" :router="true" mode="vertical" :collapse="toggSiderBar">
             <template v-for="item in menu">
                 <el-submenu v-if="item.children.length !== 0" :index="item.router" :key="item.router">
                     <template slot="title">
@@ -13,7 +13,7 @@
                         <span slot="title">{{langType === 'en'? item.name_en: item.name}}</span>
                     </template>
                     <el-menu-item v-for="child in item.children" :index="child.router" :key="child.router">
-                        <i :class="child.icon"></i>
+                        <!-- <i :class="child.icon"></i> -->
                         <span slot="title">{{langType === 'en'? child.name_en: child.name}}</span>
                     </el-menu-item>
                 </el-submenu>
@@ -130,9 +130,11 @@ export default {
   .logo {
     color: #fff;
     text-align: center;
-    background: #324157;
+    background: #20a0ff;
     padding: 18px 0;
     margin: 0;
+    height: 60px;
+    box-sizing: border-box;
   }
 }
 
@@ -148,11 +150,12 @@ export default {
 .el-submenu .el-menu-item {
   padding: 0 20px;
   min-width: 160px;
-  padding-left: 20px !important;
+  padding-left: 53px !important;
 }
 
 // 改变元素属性，要不动画效果不管用，是不是很厉害啊？哈哈哈
 .rythm.twist1 {
   display: block;
 }
+
 </style>

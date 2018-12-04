@@ -4,7 +4,7 @@
     <div id="topbar-wrap" :class="{ topCollapsed: isCollapse }">
         <el-row type="flex" justify="space-between">
             <el-col :span="5">
-                <i :class="[isCollapse? 'nav-rotate': '','fa fa-bars']" @click="toggleSiderBar"></i>
+                <i :class="[isCollapse ? 'icon-spread': 'icon-recovery','iconfont']" @click="toggleSiderBar"></i>
             </el-col>
             <el-col :span="12">
                 <el-row type="flex" class="row-right" justify="end">
@@ -28,6 +28,7 @@
 <script>
 import screenfull from 'screenfull'
 import bus from '@/bus'
+import '../../static/css/iconfont.css'
 export default {
   name: 'topbar',
   data() {
@@ -77,9 +78,9 @@ export default {
 <style scoped lang="less">
 #topbar-wrap {
   overflow: hidden;
-  border-bottom: 1px solid #e7eaec;
-  background: #324157;
-  color: #fff;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  color: #353d47;
   padding: 0 15px;
   z-index: 4;
   box-sizing: border-box;
@@ -115,7 +116,7 @@ export default {
     line-height: 60px;
   }
   a.logout {
-    color: #fff;
+    color: #353d47;
     text-decoration: none;
     &:hover {
       color: #20a0ff;
@@ -126,14 +127,14 @@ export default {
     line-height: 60px;
   }
   .logout {
-    color: #fff;
+    color: #353d47;
     &:hover {
       color: #20a0ff;
     }
   }
 }
-.fa.nav-rotate {
-  transform: rotate(90deg);
+.iconfont:hover {
+  cursor: pointer;
 }
 .row-right > div {
   text-align: center;

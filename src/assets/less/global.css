@@ -6,25 +6,23 @@ body {
   margin: 0;
   padding: 0;
   background: #f3f3f4;
-  #app {
-    height: 100%;
-    .con-wrap {
-      padding-left: 160px;
-      h3 {
-        margin-top: 0;
-        color: #324157;
-      }
-      .page-component-wrap {
-        padding: 15px;
-      }
-    }
-    .con-wrap.conCollapse {
-      padding-left: 64px;
-    }
-  }
 }
-// 左侧导航图表垂直方向对齐
-// 宽度还得自己设定，坑死
+body #app {
+  height: 100%;
+}
+body #app .con-wrap {
+  padding-left: 160px;
+}
+body #app .con-wrap h3 {
+  margin-top: 0;
+  color: #324157;
+}
+body #app .con-wrap .page-component-wrap {
+  padding: 15px;
+}
+body #app .con-wrap.conCollapse {
+  padding-left: 64px;
+}
 .el-menu {
   width: 100%;
 }
@@ -39,20 +37,17 @@ body {
   vertical-align: middle;
   color: #ddd;
 }
-
-// 自定义必填项的左上角红色星号
 .required-self label.el-form-item__label:before {
   content: '*';
   color: #ff4949;
   margin-right: 4px;
 }
 #sidebar-wrap ul ul li {
-  background: rgba(40, 52, 70, 1) !important;
-  &:hover {
-    background: #48576a !important;
-  }
+  background: #283446 !important;
 }
-
+#sidebar-wrap ul ul li:hover {
+  background: #48576a !important;
+}
 .el-menu .el-submenu__title i {
   color: #fff;
 }
