@@ -7,7 +7,7 @@
                 <i :class="[isCollapse ? 'icon-spread': 'icon-recovery','iconfont']" @click="toggleSiderBar"></i>
             </el-col>
             <el-col :span="12">
-                <el-row type="flex" class="row-right" justify="end">
+                <el-row type="flex" class="row-right" justify="end" style="margin-right:-15px">
                     <el-col :span="5">
                         <a class="animated fadeIn">{{$t('m.topbar.sayHi')}}，{{userName}}</a>
                     </el-col>
@@ -17,7 +17,7 @@
                     <el-col :span="2">
                         <i :class="[isFullscreen? 'fa-compress': 'fa-arrows-alt','fa ']" title="切换全屏" @click="toggleFullscreen"></i>
                     </el-col>
-                    <el-col :span="3">
+                    <el-col :span="2">
                         <i class="fa fa-sign-out logout" title="退出" @click.prevent="logout"></i>
                     </el-col>
                 </el-row>
