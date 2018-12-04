@@ -99,7 +99,7 @@ export default {
     font-weight: 600;
   }
   .fa {
-    font-size: 24px;
+    font-size: 22px;
     transition: all 0.5s;
     &:hover {
       cursor: pointer;
