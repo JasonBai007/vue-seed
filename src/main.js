@@ -7,7 +7,7 @@ import router from './router'
 import axios from 'axios'
 import store from './store'
 import VueParticles from 'vue-particles'
-import i18n from './lang' // Internationalization
+import i18n from './lang'
 import * as utils from '@/utils'
 import 'font-awesome/scss/font-awesome.scss'
 // 引入定制标题的指令
@@ -16,7 +16,8 @@ import 'directives/customTitle.js'
 import '@/mock'
 // 引入完整的饿了么组件库
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import 'element-ui/lib/theme-chalk/index.css'
+import './assets/scss/element-variables.scss'
 Vue.use(ElementUI);
 // 使用登录页粒子效果插件
 Vue.use(VueParticles)
