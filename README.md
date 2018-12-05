@@ -39,7 +39,7 @@ http-server
 * jsonp
 * eCharts @ 3.7.2
 * Element-UI @ 2.4.3
-* Less
+* Sass (怀念Less)
 * Animate.CSS
 * Font-Awesome
 * screenfull

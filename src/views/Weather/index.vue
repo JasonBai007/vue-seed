@@ -110,7 +110,7 @@ export default {
   }
 };
 </script>
-<style scoped lang="less">
+<style scoped lang="scss">
 .sel-row {
   margin-bottom: 20px;
   .sel-label {

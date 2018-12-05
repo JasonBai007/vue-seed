@@ -87,7 +87,7 @@ export default {
         },
         color: this.$store.state.common.chartTheme,
         grid: {
-          top: "20%",
+          top: "12%",
           left: "3%",
           right: "3%",
           bottom: "12%",
@@ -98,7 +98,7 @@ export default {
         },
         toolbox: {
           show: true,
-          top: 20,
+          top: 10,
           right: 20,
           feature: {
             dataView: { readOnly: false },
@@ -168,9 +168,9 @@ export default {
   }
 };
 </script>
-<style lang="less">
+<style lang="scss">
 #myChartWrap {
   width: 100%;
-  height: calc(100vh - 45px);
+  height: 70vh;
 }
 </style>

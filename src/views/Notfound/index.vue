@@ -16,7 +16,7 @@ export default {
     }
 }
 </script>
-<style scoped lang="less">
+<style scoped lang="scss">
 h1 {
     text-align: center;
     font-size: 12em;

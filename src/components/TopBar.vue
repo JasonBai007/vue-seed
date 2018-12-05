@@ -75,7 +75,7 @@ export default {
   }
 }
 </script>
-<style scoped lang="less">
+<style scoped lang="scss">
 #topbar-wrap {
   overflow: hidden;
   border-bottom: 1px solid #ddd;

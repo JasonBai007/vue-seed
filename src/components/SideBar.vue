@@ -102,7 +102,7 @@ export default {
   }
 };
 </script>
-<style scoped lang="less">
+<style scoped lang="scss">
 #sidebar-wrap {
   width: 160px;
   height: 100%;

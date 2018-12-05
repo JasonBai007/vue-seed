@@ -40,7 +40,7 @@ export default {
     }
 }
 </script>
-<style scoped lang="less">
+<style scoped lang="scss">
 .goup {
     position: fixed;
     right: 20px;
