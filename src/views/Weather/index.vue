@@ -1,5 +1,5 @@
 <template>
-  <div class="charts" v-title="'天气预报'">
+  <div class="charts">
     <el-row class="sel-row">
       <el-col :span="2" class="sel-label">选择城市：</el-col>
       <el-col :span="3">

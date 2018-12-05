@@ -1,6 +1,6 @@
 <template>
     <div class="bg">
-        <div class="login-wrap animated flipInY" v-title="'Auto Vue'">
+        <div class="login-wrap animated flipInY">
             <h3>Auto Vue</h3>
             <h3>{{$t('m.login.introduction')}}</h3>
             <el-form ref="form" :model="form" :rules="rules" label-width="0px">

@@ -1,5 +1,5 @@
 <template>
-    <div v-title="'关于作者'">
+    <div>
         关于作者
         <contact-card></contact-card>
     </div>

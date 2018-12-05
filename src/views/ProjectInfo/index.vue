@@ -1,5 +1,5 @@
 <template>
-  <div v-title="'项目信息'">
+  <div>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
         <i class="el-icon-edit"></i>&nbsp;&nbsp;

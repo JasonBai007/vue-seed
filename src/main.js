@@ -10,8 +10,6 @@ import VueParticles from 'vue-particles'
 import i18n from './lang'
 import * as utils from '@/utils'
 import 'font-awesome/scss/font-awesome.scss'
-// 引入定制标题的指令
-import 'directives/customTitle.js'
 // 在入口处引入模拟的假数据
 import '@/mock'
 // 引入完整的饿了么组件库
