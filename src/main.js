@@ -18,13 +18,12 @@ import '@/mock'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
-
+// 使用登录页粒子效果插件
 Vue.use(VueParticles)
-
+// 将axios绑定到vue原型上
 Vue.prototype.$axios = axios
 // Vue 的全局配置
 Vue.config.productionTip = false
-
 // 上线全局请求配置
 axios.defaults.baseURL = 'api/v1/'
 
