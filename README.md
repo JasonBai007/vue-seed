@@ -81,7 +81,6 @@ http-server
 | Name | Remark |
 | - | - |
 | .vscode | VScode的sftp插件配置文件，用于将编译后文件传输到服务器上 |
-| docs | github或coding上，用于生成预览页面的文件，公司项目中可删除 |
 | dist | 打包后的文件所在目录 |
 | screenshot | github上README页面上的预览图片，可删除 |
 
