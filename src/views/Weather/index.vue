@@ -26,7 +26,7 @@
         </el-card>
       </el-col>
     </el-row>
-    <div class="chart-wrap">
+    <div class="chart-wrap" v-loading="loading">
       <el-row>
         <el-col :span="24">
           <el-card class="box-card">
@@ -56,6 +56,7 @@ export default {
   },
   data() {
     return {
+      loading: true,
       cityData: {},
       options: arr,
       sel: "101010100",
@@ -64,7 +65,6 @@ export default {
         series1: [],
         series2: []
       },
-      tableData: []
     };
   },
   mounted() {
@@ -72,16 +72,17 @@ export default {
   },
   methods: {
     getData() {
+      this.loading = true
       jsonp(
         "http://wthrcdn.etouch.cn/weather_mini?citykey=" + this.sel,
         (err, res) => {
+          this.loading = false
           if (err) {
             console.error(err.message);
           } else {
             let data = res.data;
             this.cityData = data;
             this.renderChart(data.forecast);
-            this.renderTable(data.forecast);
           }
         }
       );
@@ -94,17 +95,6 @@ export default {
         this.lineData.xAxis.push(v.date);
         this.lineData.series1.push(v.high.match(/-|\d+/g).join(""));
         this.lineData.series2.push(v.low.match(/-|\d+/g).join(""));
-      });
-    },
-    renderTable(data) {
-      this.tableData = [];
-      data.forEach((v, i) => {
-        var obj = {
-          date: v.date,
-          high: v.high.match(/-|\d+/g).join(""),
-          low: v.low.match(/-|\d+/g).join("")
-        };
-        this.tableData.push(obj);
       });
     }
   }
