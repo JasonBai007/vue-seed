@@ -23,7 +23,7 @@ export default {
       menu[0].children.push({
         name: "关于作者",
         name_en: 'About',
-        router: "/enroll-list",
+        router: "/about",
         icon: "el-icon-document"
       });
       localStorage.menu = JSON.stringify(menu);

@@ -42,15 +42,15 @@ const router = new Router({
                 requireAuth: true
             },
             component: Layout,
-            // redirect: '/project-info', // 重定向到第一个子路由，否则只渲染Layout组件，这块儿使用时解除注释
+            // redirect: '/notes', // 重定向到第一个子路由，否则只渲染Layout组件，这块儿使用时解除注释
             redirect: '/signin', // 这里重定向到登录页面，是为了展示使用，实际用这个项目开发时，需要注释这行，解除上一行的注释
             children: [{
-                    path: 'project-info',
+                    path: 'notes',
                     meta: { requireAuth: true },
                     component: ProjectInfo
                 },
                 {
-                    path: 'enroll-list',
+                    path: 'about',
                     meta: { requireAuth: true },
                     component: About
                 },
@@ -65,7 +65,7 @@ const router = new Router({
                     component: Cube
                 },
                 {
-                    path: 'authority-test',
+                    path: 'authority',
                     meta: { requireAuth: true },
                     component: AuthorityTest
                 }
@@ -84,7 +84,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
     // 如果已经登录，并且要去登录页，就不让TA去登录页，重定向到首页
     if (to.path === '/signin' && localStorage.token) {
-        next('/project-info')
+        next('/notes')
     } else {
         next()
     }

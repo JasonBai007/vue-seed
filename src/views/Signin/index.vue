@@ -126,7 +126,7 @@ export default {
         // 提取菜单数组，交给本地存储
         let menu = res.data.data.menu;
         localStorage.menu = JSON.stringify(menu);
-        this.$router.push("project-info");
+        this.$router.push("notes");
       });
     },
     openMsg() {

@@ -29,6 +29,7 @@ body {
 // 宽度还得自己设定，坑死
 .el-menu {
   width: 100%;
+  border-right: none!important;
 }
 .el-menu-item [class^='el-icon-'] {
   vertical-align: middle;
