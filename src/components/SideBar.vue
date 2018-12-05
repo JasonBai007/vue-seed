@@ -113,6 +113,10 @@ export default {
   z-index: 5;
   transition: all .5s;
   background: #353d47;
+  &.collapsed {
+    width: 64px;
+    transition: all 0.5s;
+  }
 
   /* 图标动画 */
   .imgWrap {
@@ -140,11 +144,6 @@ export default {
   }
 }
 
-// 动态改变左侧导航包裹层宽度
-#sidebar-wrap.collapsed {
-  width: 64px;
-  transition: all 0.5s;
-}
 .el-menu {
   height: 100%;
 }

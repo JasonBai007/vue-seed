@@ -84,50 +84,26 @@ export default {
   padding: 0 15px;
   z-index: 4;
   box-sizing: border-box;
-  .logo {
-    color: #fff;
-    font-weight: bold;
+  a {
     line-height: 60px;
-    margin: 0;
-    letter-spacing: 1px;
   }
-  .freeBtn {
-    margin-top: 12px;
-    text-align: right;
-  }
-  .name {
-    font-weight: 600;
-  }
-  .fa {
-    font-size: 22px;
+  i {
+    font-size: 20px;
+    line-height: 60px;
     transition: all 0.5s;
     &:hover {
       cursor: pointer;
     }
   }
-  a {
-    line-height: 60px;
+  .fa-language:hover {
+    transform: rotateY(180deg)
   }
-  a.logout {
-    color: #353d47;
+  .logout {
     text-decoration: none;
     &:hover {
       color: #20a0ff;
     }
   }
-  i {
-    font-size: 20px;
-    line-height: 60px;
-  }
-  .logout {
-    color: #353d47;
-    &:hover {
-      color: #20a0ff;
-    }
-  }
-}
-.iconfont:hover {
-  cursor: pointer;
 }
 .row-right > div {
   text-align: center;
