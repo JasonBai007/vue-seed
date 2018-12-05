@@ -98,7 +98,7 @@ export default {
         },
         toolbox: {
           show: true,
-          top: 10,
+          top: 0,
           right: 20,
           feature: {
             dataView: { readOnly: false },
@@ -171,6 +171,6 @@ export default {
 <style lang="scss">
 #myChartWrap {
   width: 100%;
-  height: 70vh;
+  height: 55vh;
 }
 </style>

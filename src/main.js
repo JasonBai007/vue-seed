@@ -9,7 +9,7 @@ import store from './store'
 import VueParticles from 'vue-particles'
 import i18n from './lang' // Internationalization
 import * as utils from '@/utils'
-import 'font-awesome/less/font-awesome.less'
+import 'font-awesome/scss/font-awesome.scss'
 // 引入定制标题的指令
 import 'directives/customTitle.js'
 // 在入口处引入模拟的假数据
