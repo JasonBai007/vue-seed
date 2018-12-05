@@ -67,7 +67,7 @@ module.exports = {
                 loader: 'url-loader',
                 query: {
                     limit: 10000,
-                    name: utils.assetsPath('media/[name].[ext]')
+                    name: utils.assetsPath('audio/[name].[ext]')
                 }
             }
         ]
