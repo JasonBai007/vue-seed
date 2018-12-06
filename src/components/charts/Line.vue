@@ -87,9 +87,9 @@ export default {
         },
         color: this.$store.state.common.chartTheme,
         grid: {
-          top: "12%",
-          left: "3%",
-          right: "3%",
+          top: "15%",
+          left: "1%",
+          right: "1%",
           bottom: "12%",
           containLabel: true
         },

@@ -27,3 +27,21 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.con-wrap {
+  padding-left: 160px;
+  transition: all 0.5s;
+  h3 {
+    margin-top: 0;
+    color: #324157;
+  }
+  .page-component-wrap {
+    padding: 10px;
+  }
+}
+.con-wrap.conCollapse {
+  padding-left: 64px;
+  transition: all 0.5s;
+}
+</style>
+
