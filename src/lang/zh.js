@@ -8,7 +8,7 @@ export const m = {
     remember: '记住密码',
     forget: '忘记密码',
     info: '你咋忘不了吃呢？',
-    button: '登录'
+    button: '登 录'
   },
   topbar: {
     sayHi: '嗨',
