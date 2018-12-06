@@ -5,7 +5,7 @@
         <h3 class="logo">
           <span class="rythm twist1">{{toggSiderBar ? 'VUE': 'AUTO VUE'}}</span>
         </h3>
-        <el-menu background-color="#353d47" text-color="#fff" :default-active="$route.path" :unique-opened="true" :router="true" mode="vertical" :collapse="toggSiderBar">
+        <el-menu background-color="#3f4d67" text-color="#fff" :default-active="$route.path" :unique-opened="true" :router="true" mode="vertical" :collapse="toggSiderBar">
             <template v-for="item in menu">
                 <el-submenu v-if="item.children.length !== 0" :index="item.router" :key="item.router">
                     <template slot="title">
@@ -112,7 +112,7 @@ export default {
   bottom: 0;
   z-index: 5;
   transition: all .5s;
-  background: #353d47;
+  background: #3f4d67;
   &.collapsed {
     width: 64px;
     transition: all 0.5s;
@@ -136,7 +136,6 @@ export default {
   .logo {
     color: #fff;
     text-align: center;
-    background: #20a0ff;
     padding: 18px 0;
     margin: 0;
     height: 60px;

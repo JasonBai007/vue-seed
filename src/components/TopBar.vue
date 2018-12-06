@@ -101,7 +101,7 @@ export default {
   .logout {
     text-decoration: none;
     &:hover {
-      color: #20a0ff;
+      color: #1dc4e9;
     }
   }
 }
