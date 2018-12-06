@@ -128,7 +128,7 @@ http-server
 ![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/map.png)
 1、登录页
 ![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/login.jpg)
-2、气象页
+2、首页
+![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/index.png)
+3、气象页
 ![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/weather.png)
-3、魔方页
-![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/cube.png)
