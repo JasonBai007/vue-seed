@@ -6,6 +6,7 @@ if (!process.env.NODE_ENV) {
 }
 
 var opn = require('opn')
+var address = require('address')
 var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
@@ -62,7 +63,9 @@ app.use(hotMiddleware)
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
-var uri = 'http://localhost:' + port
+// var uri = 'http://localhost:' + port
+// 使用address模块，自动获取本机IP
+var uri = 'http://' + (address.ip() || 'localhost') +':' + port
 
 var _resolve
 var readyPromise = new Promise(resolve => {

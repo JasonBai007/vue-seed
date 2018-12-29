@@ -27,6 +27,7 @@
         "vuex": "^3.0.1"
     },
     "devDependencies": {
+        "address": "^1.0.3",
         "autoprefixer": "^6.7.2",
         "babel-core": "^6.22.1",
         "babel-loader": "^6.2.10",
