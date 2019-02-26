@@ -42,7 +42,6 @@ http-server
 * Sass (怀念Less)
 * Animate.CSS
 * Font-Awesome
-* screenfull
 * MockJS
 * Yarn
 * babel-polyfill 兼容IE垫片
@@ -68,6 +67,7 @@ http-server
 4. 背景音乐的歌名是：Romeo's Tune
 5. 如果安装node-sass失败，那就翻墙后，再次安装，就可以了。
 6. 如果要覆盖饿了么组件的样式变量，就编辑assets/scss/element-variables.scss文件。
+7. 因为谷歌浏览器升级到71版本，导致screenfull.js源码98行有问题，已经将改动后的文件复制到了assets/libs文件夹下。
 
 ## Useful Links
 * [饿了么组件](http://element.eleme.io/#/zh-CN/component/installation)

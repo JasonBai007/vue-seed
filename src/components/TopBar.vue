@@ -26,7 +26,7 @@
     </div>
 </template>
 <script>
-import screenfull from 'screenfull'
+import '@/assets/libs/screenfull.js'
 import bus from '@/bus'
 import '../../static/css/iconfont.css'
 export default {

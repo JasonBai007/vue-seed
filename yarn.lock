@@ -4007,10 +4007,6 @@ schema-utils@^0.3.0:
   dependencies:
     ajv "^5.0.0"
 
-screenfull@^3.3.2:
-  version "3.3.2"
-  resolved "http://registry.npm.taobao.org/screenfull/download/screenfull-3.3.2.tgz#a6adf3b3f5556da812725385880600f5b39fbf25"
-
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "http://registry.npm.taobao.org/scss-tokenizer/download/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
