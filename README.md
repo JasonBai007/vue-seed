@@ -1,6 +1,6 @@
 # Vue-Element-Admin
 ![build](https://img.shields.io/travis/rust-lang/rust.svg)
-![license](https://img.shields.io/badge/license-MIT-blue.svg)
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 ![Prs](https://img.shields.io/badge/Prs-welcome-brightgreen.svg)
 ![author](https://img.shields.io/badge/author-jasonbai-orange.svg)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
