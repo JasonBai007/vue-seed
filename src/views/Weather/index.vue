@@ -4,26 +4,19 @@
       <el-col :span="2" class="sel-label">选择城市：</el-col>
       <el-col :span="3">
         <el-select v-model="sel" filterable placeholder="请选择城市" @change="getData">
-          <el-option v-for="(item,index) in options" :label="item.label" :value="item.value" :key="index">
-          </el-option>
+          <el-option v-for="(item,index) in options" :label="item.label" :value="item.value" :key="index"></el-option>
         </el-select>
       </el-col>
     </el-row>
     <el-row :gutter="20">
       <el-col :span="4">
-        <el-card class="box-card">
-          {{'实时温度：' + (cityData.wendu || 'XX') + '℃'}}
-        </el-card>
+        <el-card class="box-card">{{'实时温度：' + (cityData.wendu || 'XX') + '℃'}}</el-card>
       </el-col>
       <el-col :span="4">
-        <el-card class="box-card">
-          {{'空气质量：' + ( cityData.aqi || '暂无' )}}
-        </el-card>
+        <el-card class="box-card">{{'空气质量：' + ( cityData.aqi || '暂无' )}}</el-card>
       </el-col>
       <el-col :span="16">
-        <el-card class="box-card">
-          {{cityData.ganmao || '暂无提示'}}
-        </el-card>
+        <el-card class="box-card">{{cityData.ganmao || '暂无提示'}}</el-card>
       </el-col>
     </el-row>
     <div class="chart-wrap" v-loading="loading">
@@ -31,8 +24,8 @@
         <el-col :span="24">
           <el-card class="box-card">
             <div class="animated fadeIn">
-              <!-- 这里是折线图组件 -->
-              <line-chart :lineData="lineData"></line-chart>
+              <!-- 图表组件 -->
+              <my-chart :chartData="chartData"></my-chart>
             </div>
           </el-card>
         </el-col>
@@ -44,7 +37,7 @@
 // 引入城市列表
 import arr from "../../assets/json/citylist.json";
 // 引入自己写的折线图组件
-import lineChart from "comp/charts/Line";
+import MyChart from "comp/charts/MyChart";
 // 引入支持jsonp的库 https://github.com/webmodules/jsonp
 // axios不支持jsonp https://github.com/axios/axios/blob/master/COOKBOOK.md#jsonp
 import jsonp from "jsonp";
@@ -52,7 +45,7 @@ import jsonp from "jsonp";
 export default {
   name: "weather",
   components: {
-    "line-chart": lineChart
+    "my-chart": MyChart
   },
   data() {
     return {
@@ -60,11 +53,7 @@ export default {
       cityData: {},
       options: arr,
       sel: "101010100",
-      lineData: {
-        xAxis: [],
-        series1: [],
-        series2: []
-      },
+      chartData: {}
     };
   },
   mounted() {
@@ -72,11 +61,11 @@ export default {
   },
   methods: {
     getData() {
-      this.loading = true
+      this.loading = true;
       jsonp(
         "http://wthrcdn.etouch.cn/weather_mini?citykey=" + this.sel,
         (err, res) => {
-          this.loading = false
+          this.loading = false;
           if (err) {
             console.error(err.message);
           } else {
@@ -87,15 +76,84 @@ export default {
         }
       );
     },
+    // 构建配置对象，渲染折线图
     renderChart(data) {
-      this.lineData.xAxis = [];
-      this.lineData.series1 = [];
-      this.lineData.series2 = [];
-      data.forEach((v, i) => {
-        this.lineData.xAxis.push(v.date);
-        this.lineData.series1.push(v.high.match(/-|\d+/g).join(""));
-        this.lineData.series2.push(v.low.match(/-|\d+/g).join(""));
-      });
+      let opts = {
+        title: {
+          text: "近五天气温趋势",
+          x: "center",
+          textStyle: {
+            color: "#666"
+          }
+        },
+        color: this.$store.state.common.chartTheme,
+        grid: {
+          top: "15%",
+          left: "1%",
+          right: "1%",
+          bottom: "12%",
+          containLabel: true
+        },
+        tooltip: {
+          trigger: "axis"
+        },
+        toolbox: {
+          show: true,
+          top: 0,
+          right: 20,
+          feature: {
+            dataView: { readOnly: false },
+            magicType: { type: ["line", "bar"] },
+            dataZoom: {
+              yAxisIndex: "none"
+            },
+            restore: {},
+            saveAsImage: {}
+          }
+        },
+        legend: {
+          bottom: 0,
+          data: ["最高气温", "最低气温"]
+        },
+        xAxis: {
+          data: data.map(v => v.date)
+        },
+        yAxis: {
+          type: "value",
+          axisLabel: {
+            formatter: "{value} °C"
+          }
+        },
+        series: [
+          {
+            name: "最高气温",
+            type: "line",
+            smooth: true,
+            data: data.map(v => v.high.match(/-|\d+/g).join("")),
+            label: {
+              normal: {
+                show: true,
+                position: "top",
+                formatter: "{c}℃"
+              }
+            }
+          },
+          {
+            name: "最低气温",
+            type: "line",
+            smooth: true,
+            data: data.map(v => v.low.match(/-|\d+/g).join("")),
+            label: {
+              normal: {
+                show: true,
+                position: "top",
+                formatter: "{c}℃"
+              }
+            }
+          }
+        ]
+      };
+      this.chartData = opts;
     }
   }
 };

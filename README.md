@@ -65,9 +65,10 @@ http-server
 2. 由于引入了rythm.js，导致其它页面不兼容IE，使用时，删除Siderbar.vue里面关于rythm.js的代码就可以了
 3. 配置webpack.base.conf.js中的alias的vue字段，可以解决IE浏览器中的报错问题。（这块儿不用动了，已调整好）
 4. 背景音乐的歌名是：Romeo's Tune
-5. 如果安装node-sass失败，那就翻墙后，再次安装，就可以了。
+5. node-sass经常安装失败，需要多次尝试，如果实在不行，最好翻墙后再次 yarn install。
 6. 如果要覆盖饿了么组件的样式变量，就编辑assets/scss/element-variables.scss文件。
 7. 因为谷歌浏览器升级到71版本，导致screenfull.js源码98行有问题，已经将改动后的文件复制到了assets/libs文件夹下。
+8. 彻底重写了图表组件，提高了组件的扩展性，图表配置需要在使用组件的父组件中设置。
 
 ## Useful Links
 * [饿了么组件](http://element.eleme.io/#/zh-CN/component/installation)
@@ -101,6 +102,10 @@ http-server
 3. 如果已经登录过，本地有token，就待在首页，不用再登录一遍了
 
 ## Change Log
+2019-05-05
+* 升级饿了么组件库到最新版
+* 彻底重写了图表组件
+
 2018-08-06
 * 修复退出后音乐不停止bug
 * 优化页面Logo跳舞效果
