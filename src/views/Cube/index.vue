@@ -1,14 +1,14 @@
 <template>
-    <div class="cube-wrap">
-       <Cube></Cube>
-    </div>
+  <div class="cube-wrap">
+    <Cube></Cube>
+  </div>
 </template>
 <script>
-import Cube from 'comp/Cube'
+import Cube from "@/components/Cube";
 export default {
   name: "cube",
   components: {
-      Cube
+    Cube
   }
 };
 </script>

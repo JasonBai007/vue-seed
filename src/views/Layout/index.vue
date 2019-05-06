@@ -11,8 +11,8 @@
     </div>
 </template>
 <script>
-import TopBar from 'comp/TopBar'
-import SideBar from 'comp/SideBar'
+import TopBar from '@/components/TopBar'
+import SideBar from '@/components/SideBar'
 export default {
   name: 'layout',
   computed: {
