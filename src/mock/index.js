@@ -4,7 +4,7 @@ if (debug) {
   Mock.mock(/login/, {
     data: {
       userId: "@integer(1,10)",
-      "userName|1": ["鲁班七号", "夏侯惇", "蔡文姬", "王昭君", "妲己"],
+      "userName|1": ["鲁班七号", "甄姬", "东皇太一", "娜可露露", "蔡文姬", "王昭君", "妲己"],
       token: "@string(30)"
     },
     msg: "Success",

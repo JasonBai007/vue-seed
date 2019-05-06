@@ -95,7 +95,9 @@ export default {
           containLabel: true
         },
         tooltip: {
-          trigger: "axis"
+          trigger: "axis",
+          // 猜测文档中 a b c d 的时候到了
+          formatter: "{b}: <br /> {a0}: {c0}℃ <br /> {a1}: {c1}℃"
         },
         toolbox: {
           show: true,

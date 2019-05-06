@@ -1,7 +1,7 @@
 <template>
   <div class="chartWrap">
     <!-- 这里是要渲染的图表 -->
-    <div :id="chartId" style="width: 100%;height:360px;"></div>
+    <div :id="chartId" style="height:360px;"></div>
   </div>
 </template>
 <script>
