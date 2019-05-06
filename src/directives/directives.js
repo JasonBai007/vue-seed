@@ -1,6 +1,13 @@
 import Vue from 'vue';
 
-// 全局注册count指令
+// 定制每个页面的标题
+Vue.directive('title', {
+  inserted(el, binding) {
+    document.title = binding.value;
+  }
+});
+
+// 统计输入框输入的字符个数，并在输入框后面展示出来
 Vue.directive('count', {
 
   // 被绑定元素插入父节点时调用(仅保证父节点存在，但不一定已被插入文档中

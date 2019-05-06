@@ -17,7 +17,7 @@ require("echarts/lib/component/toolbox");
 require("echarts/lib/component/legend");
 
 export default {
-  name: "mychart",
+  name: "commonchart",
   props: {
     chartData: {
       type: Object,

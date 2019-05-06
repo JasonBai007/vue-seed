@@ -13,7 +13,6 @@
 <script>
 import TopBar from 'comp/TopBar'
 import SideBar from 'comp/SideBar'
-import 'filters/handleNum.js'
 export default {
   name: 'layout',
   computed: {
