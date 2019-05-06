@@ -34,8 +34,8 @@ http-server
 * ES6
 * Axios
 * jsonp
-* eCharts @ 3.7.2
-* Element-UI @ 2.4.3
+* eCharts @ 4.2.1
+* Element-UI @ 2.8.2
 * Sass (怀念Less)
 * Animate.CSS
 * Font-Awesome
