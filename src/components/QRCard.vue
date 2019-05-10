@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: "contactCard",
+  name: "qrCard",
   data() {
     return {};
   },

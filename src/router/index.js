@@ -2,25 +2,25 @@ import Vue from "vue";
 import Router from "vue-router";
 
 // 登录
-const Signin = resolve => require(["@/views/Signin"], resolve);
+const Signin = resolve => require(["@/views/signin"], resolve);
 
 // 非登录页的包裹组件
-const Layout = resolve => require(["@/views/Layout"], resolve);
+const Layout = resolve => require(["@/views/layout"], resolve);
 
 // 项目信息
-const ProjectInfo = resolve => require(["@/views/ProjectInfo"], resolve);
+const Notes = resolve => require(["@/views/notes"], resolve);
 
 // 关于作者
-const About = resolve => require(["@/views/About"], resolve);
+const About = resolve => require(["@/views/about"], resolve);
 
 // 天气预报
-const Weather = resolve => require(["@/views/Weather"], resolve);
+const Weather = resolve => require(["@/views/weather"], resolve);
 // 立方体
-const Cube = resolve => require(["@/views/Cube"], resolve);
+const Cube = resolve => require(["@/views/cube"], resolve);
 // 权限测试
-const AuthorityTest = resolve => require(["@/views/AuthorityTest"], resolve);
+const AuthorityTest = resolve => require(["@/views/authority-test"], resolve);
 // 404
-const Notfound = resolve => require(["@/views/Notfound"], resolve);
+const Notfound = resolve => require(["@/views/404"], resolve);
 
 Vue.use(Router);
 
@@ -52,7 +52,7 @@ const router = new Router({
             requireAuth: true,
             title: "开发备忘"
           },
-          component: ProjectInfo
+          component: Notes
         },
         {
           path: "about",

@@ -29,7 +29,7 @@ export default {
         "代码按页面分，每个人负责一个页面，尽量避免公共代码文件",
         "如果想看其它队友的页面效果，可以在本地新建一个分支，然后将自己和对方的分支合并上去",
         "深度监听一个对象非常消耗性能，可以转换成监听一个开关变量，开关一变就运行",
-        "渲染图表时，可以在渲染前先 this.myChart.dispose()，销毁上次的图表",
+        "渲染图表时，可以在渲染前先 this.myChart.clear()，清空上次图表数据",
         "vue-particles打包报错：https://github.com/creotip/vue-particles/issues/7",
         "配置favicon：https://segmentfault.com/a/1190000010043013#articleHeader5",
         "切换路由时，vuex里的state不会跟着变，除非在导航守卫里提交mutations"

@@ -17,7 +17,7 @@ require("echarts/lib/component/toolbox");
 require("echarts/lib/component/legend");
 
 export default {
-  name: "commonchart",
+  name: "achart",
   props: {
     chartData: {
       type: Object,
@@ -45,8 +45,8 @@ export default {
     }
   },
   mounted() {
-    // 首先需要先渲染一遍图表
-    this.renderChart();
+    // 看来不需要先渲染一遍图表
+    // this.renderChart();
     // 监听窗口变化，一旦变化，立刻调用echarts的API，进行重新渲染
     window.addEventListener("resize", e => {
       this.myChart.resize();

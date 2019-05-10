@@ -25,7 +25,7 @@
           <el-card class="box-card">
             <div class="animated fadeIn">
               <!-- 图表组件 -->
-              <c-chart :chartData="chartData"></c-chart>
+              <a-chart :chartData="chartData"></a-chart>
             </div>
           </el-card>
         </el-col>
@@ -37,7 +37,7 @@
 // 引入城市列表
 import arr from "@/assets/json/citylist.json";
 // 引入自己写的通用图表组件
-import CommonChart from "@/components/CommonChart";
+import AChart from "@/components/AChart";
 // 引入支持jsonp的库 https://github.com/webmodules/jsonp
 // axios不支持jsonp https://github.com/axios/axios/blob/master/COOKBOOK.md#jsonp
 import jsonp from "jsonp";
@@ -45,7 +45,7 @@ import jsonp from "jsonp";
 export default {
   name: "weather",
   components: {
-    "c-chart": CommonChart
+    "a-chart": AChart
   },
   data() {
     return {
