@@ -5,16 +5,17 @@
   </div>
 </template>
 <script>
+// 由于已经在html里面引入了echarts，这里就不按需引入了
 // 引入基本模板
-let echarts = require("echarts/lib/echarts");
+// let echarts = require("echarts/lib/echarts");
 // 引入折线图组件
-require("echarts/lib/chart/line");
-require("echarts/lib/chart/bar");
+// require("echarts/lib/chart/line");
+// require("echarts/lib/chart/bar");
 // 引入提示框和图例组件
-require("echarts/lib/component/title");
-require("echarts/lib/component/tooltip");
-require("echarts/lib/component/toolbox");
-require("echarts/lib/component/legend");
+// require("echarts/lib/component/title");
+// require("echarts/lib/component/tooltip");
+// require("echarts/lib/component/toolbox");
+// require("echarts/lib/component/legend");
 
 export default {
   name: "achart",
@@ -22,6 +23,7 @@ export default {
     chartData: {
       type: Object,
       required: true,
+      // 对象或数组默认值必须从一个工厂函数获取
       default() {
         return {};
       }
