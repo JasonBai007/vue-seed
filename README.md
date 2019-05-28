@@ -10,7 +10,7 @@
 # install dependencies
 yarn install
 
-# serve with hot reload at localhost:8082
+# serve with hot reload at localhost:1024
 yarn run dev
 
 # build for production with minification
