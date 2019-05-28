@@ -9,6 +9,10 @@ import store from './store'
 import VueParticles from 'vue-particles'
 import i18n from './lang'
 import * as utils from '@/utils'
+
+// 引入全局过滤器
+// import '@/filters'
+
 import 'font-awesome/scss/font-awesome.scss'
 // 在入口处引入模拟的假数据
 import '@/mock'
