@@ -55,7 +55,6 @@
 import Rythm from "rythm.js";
 const rythm = new Rythm();
 const music = require("../../static/audio/romeostune.mp3");
-import bus from "@/bus";
 
 export default {
   name: "sidebar",
@@ -75,7 +74,7 @@ export default {
   },
   created() {
     this.initRythm();
-    bus.$on("stopMusic", () => {
+    this.$bus.$on("stopMusic", () => {
       this.isMusicOn = false;
       rythm.stop();
     });

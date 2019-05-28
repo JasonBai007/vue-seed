@@ -27,7 +27,6 @@
 </template>
 <script>
 import '@/assets/libs/screenfull.js'
-import bus from '@/bus'
 import '../../static/css/iconfont.css'
 export default {
   name: 'topbar',
@@ -63,7 +62,7 @@ export default {
     },
     logout() {
       localStorage.clear()
-      bus.$emit('stopMusic')
+      this.$bus.$emit('stopMusic')
       this.$router.push('signin')
     }
   },

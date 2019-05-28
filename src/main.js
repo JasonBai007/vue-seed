@@ -21,6 +21,8 @@ Vue.use(ElementUI);
 Vue.use(VueParticles)
 // 将axios绑定到vue原型上
 Vue.prototype.$axios = axios
+// 将公共汽车绑定到vue原型上
+Vue.prototype.$bus = new Vue()
 // Vue 的全局配置
 Vue.config.productionTip = false
 // 上线全局请求配置
