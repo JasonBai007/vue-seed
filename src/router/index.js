@@ -2,25 +2,25 @@ import Vue from "vue";
 import Router from "vue-router";
 
 // 登录
-const Signin = resolve => require(["@/views/signin"], resolve);
+const Signin = () => import("@/views/signin")
 
 // 非登录页的包裹组件
-const Layout = resolve => require(["@/views/layout"], resolve);
+const Layout = () => import("@/views/layout")
 
 // 项目信息
-const Notes = resolve => require(["@/views/notes"], resolve);
+const Notes = () => import("@/views/notes")
 
 // 关于作者
-const About = resolve => require(["@/views/about"], resolve);
+const About = () => import("@/views/about")
 
 // 天气预报
-const Weather = resolve => require(["@/views/weather"], resolve);
+const Weather = () => import("@/views/weather")
 // 立方体
-const Cube = resolve => require(["@/views/cube"], resolve);
+const Cube = () => import("@/views/cube")
 // 权限测试
-const AuthorityTest = resolve => require(["@/views/authority-test"], resolve);
+const AuthorityTest = () => import("@/views/authority-test")
 // 404
-const Notfound = resolve => require(["@/views/404"], resolve);
+const Notfound = () => import("@/views/404")
 
 Vue.use(Router);
 
