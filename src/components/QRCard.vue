@@ -1,7 +1,7 @@
 <template>
-    <div id="wrapper" ref="wrapper">
-        <img src="../../static/img/wechat.jpg">
-    </div>
+  <div id="wrapper" ref="wrapper">
+    <img src="../../static/img/wechat.jpg">
+  </div>
 </template>
 <script>
 export default {
@@ -23,13 +23,17 @@ export default {
           // 当前鼠标距离顶部的距离 - dom距离顶部的距离 - dom高度的一半
           let X = ev.clientX - dom.offsetLeft - dom.offsetWidth / 2;
           let Y = ev.clientY - dom.offsetTop - dom.offsetHeight / 2;
-          this.$refs.wrapper.style.transform = `perspective(1000px) rotateY(${X / deepParam}deg) rotateX(${-Y / deepParam}deg)`;
+          this.$refs.wrapper.style.transform = `perspective(1000px) rotateY(${X /
+            deepParam}deg) rotateX(${-Y / deepParam}deg)`;
         };
       };
       dom.onmouseout = ev => {
         dom.onmousemove = null;
         // 鼠标移动到边界时，容易造成抖动，所以，加了延时
-        setTimeout( "document.getElementById('wrapper').style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`",200)
+        setTimeout(
+          "document.getElementById('wrapper').style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`",
+          200
+        );
       };
     }
   }
@@ -46,7 +50,7 @@ export default {
   /*设置父元素得景深*/
   transform: perspective(1000px);
   img {
-      width:100%;
+    width: 100%;
   }
 }
 </style>

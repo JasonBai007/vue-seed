@@ -1,12 +1,12 @@
 <template>
-    <div id="wrapper" ref="wrapper">
-        <div>前</div>
-        <div>后</div>
-        <div>上</div>
-        <div>下</div>
-        <div>左</div>
-        <div>右</div>
-    </div>
+  <div id="wrapper" ref="wrapper">
+    <div>前</div>
+    <div>后</div>
+    <div>上</div>
+    <div>下</div>
+    <div>左</div>
+    <div>右</div>
+  </div>
 </template>
 <script>
 export default {
@@ -15,10 +15,10 @@ export default {
     return {};
   },
   mounted() {
-      this.listenMouseEvent()
+    this.listenMouseEvent();
   },
-  beforeDestroy () {
-      document.onmousedown = null
+  beforeDestroy() {
+    document.onmousedown = null;
   },
   methods: {
     listenMouseEvent() {
@@ -30,7 +30,7 @@ export default {
           //鼠标移动时
           let x1 = ev.clientX - x + 30; //当前位置减去下时鼠标的位置，就获取移动了多少度，应为一开始有初始角度所以加30°
           let y1 = ev.clientY - y - 30; //甚至样式每次鼠标移动式更改样式
-          this.$refs.wrapper.style.transform = `perspective(1000px) rotateY(${x1}deg) rotateX(${-y1}deg)`
+          this.$refs.wrapper.style.transform = `perspective(1000px) rotateY(${x1}deg) rotateX(${-y1}deg)`;
         };
         document.onmouseup = () => {
           document.onmousemove = null;
