@@ -1,4 +1,4 @@
-本文件夹旨在搜集别的项目中有用的代码片段：
+Some useful pieces of code：
 
 ```javascript
 1）借助隐藏表单实现文件下载：

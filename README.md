@@ -129,13 +129,5 @@ http-server
 * 优化各个组件的文件名
 * 饿了么组件库升级到了最新版本@2.4.3
 
-## Screen Shot
-
-0、文件地图
-![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/map.png)
-1、登录页
-![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/login.jpg)
-2、首页
-![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/index.png)
-3、气象页
-![image](https://github.com/jasonBai007/vue-seed/raw/master/screenshot/weather.png)
+## License
+Anti-996
