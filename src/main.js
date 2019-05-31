@@ -1,18 +1,19 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import 'babel-polyfill' // 必须在最开始引入垫片
+// 必须在最开始引入垫片
+import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios'
 import store from './store'
-import VueParticles from 'vue-particles'
+import http from './http'
 import i18n from './lang'
-import * as utils from '@/utils'
-
 // 引入全局过滤器
 // import '@/filters'
-
+// 引入全局工具函数
+import * as utils from './utils'
+// 引入粒子特效插件
+import VueParticles from 'vue-particles'
 import 'font-awesome/scss/font-awesome.scss'
 // 在入口处引入模拟的假数据
 import '@/mock'
@@ -23,54 +24,20 @@ import './assets/scss/element-variables.scss'
 Vue.use(ElementUI);
 // 使用登录页粒子效果插件
 Vue.use(VueParticles)
-// 将axios绑定到vue原型上
-Vue.prototype.$axios = axios
-// 将公共汽车绑定到vue原型上
+  // 将http绑定到vue原型上
+Vue.prototype.$http = http
+  // 将公共汽车绑定到vue原型上
 Vue.prototype.$bus = new Vue()
-// Vue 的全局配置
+  // Vue 的全局配置
 Vue.config.productionTip = false
-// 上线全局请求配置
-axios.defaults.baseURL = 'api/v1/'
-
-// http request 拦截器
-axios.interceptors.request.use(
-    config => {
-        // 如果本地存储中有token字段， 就为所有请求加上Authorization请求头
-        if (localStorage.token) {
-            config.headers["Authorization"] = `Bearer ${localStorage.token}`
-        }
-        return config;
-    },
-    error => {
-        console.log(error) // for debug
-        Promise.reject(error)
-    }
-)
-
-// http response 拦截器
-axios.interceptors.response.use(
-    response => {
-        return response
-    },
-    error => {
-        if (error.response) {
-            switch (error.response.status) {
-                // 如果后端返回没有权限
-                case 401:
-                    // 清除token信息并跳转到登录页面
-                    localStorage.clear()
-                    router.replace("/signin");
-            }
-        }
-        return Promise.reject(error.response.data) // 返回接口返回的错误信息
-    }
-)
 
 new Vue({
-    el: '#app',
-    i18n,
-    router,
-    store,
-    template: '<App/>',
-    components: { App }
+  el: '#app',
+  i18n,
+  router,
+  store,
+  template: '<App/>',
+  components: {
+    App
+  }
 })
