@@ -27,6 +27,10 @@
   </div>
 </template>
 <script>
+// 引入粒子特效插件并注册
+import Vue from 'vue'
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
 export default {
   name: "signin",
   data() {
@@ -78,7 +82,6 @@ export default {
       }
     };
   },
-  created() {},
   methods: {
     Login(formName) {
       this.$refs[formName].validate(valid => {

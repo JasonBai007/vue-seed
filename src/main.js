@@ -8,12 +8,10 @@ import router from './router'
 import store from './store'
 import http from './http'
 import i18n from './lang'
-// 引入全局过滤器
-// import '@/filters'
 // 引入全局工具函数
 import * as utils from './utils'
-// 引入粒子特效插件
-import VueParticles from 'vue-particles'
+// 引入全局过滤器
+// import '@/filters'
 import 'font-awesome/scss/font-awesome.scss'
 // 在入口处引入模拟的假数据
 import '@/mock'
@@ -22,9 +20,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
 import './assets/scss/element-variables.scss'
 Vue.use(ElementUI);
-// 使用登录页粒子效果插件
-Vue.use(VueParticles)
-  // 将http绑定到vue原型上
+// 将http绑定到vue原型上
 Vue.prototype.$http = http
   // 将公共汽车绑定到vue原型上
 Vue.prototype.$bus = new Vue()
