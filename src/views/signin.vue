@@ -28,9 +28,11 @@
 </template>
 <script>
 // 引入粒子特效插件并注册
-import Vue from 'vue'
-import VueParticles from 'vue-particles'
-Vue.use(VueParticles)
+import Vue from "vue";
+import router from "../router/index";
+import generateRoutes from "../router/parse";
+import VueParticles from "vue-particles";
+Vue.use(VueParticles);
 export default {
   name: "signin",
   data() {
@@ -106,8 +108,14 @@ export default {
       this.$http.get("getMenu").then(res => {
         // 提取菜单数组，交给本地存储
         let menu = res.data.data.menu;
+        // 将原始数据进行本地存储
         localStorage.menu = JSON.stringify(menu);
-        this.$router.push("notes");
+        // 解析出路由配置表
+        const _routes = generateRoutes(menu);
+        // 动态加载路由配置表
+        router.addRoutes(_routes);
+        // 跳转到首页
+        this.$router.push("/notes");
       });
     },
     openMsg() {

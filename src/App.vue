@@ -6,8 +6,18 @@
   </div>
 </template>
 <script>
+import router from "./router/index";
+import generateRoutes from "./router/parse";
 export default {
-  name: "app"
+  name: "app",
+  // 在SPA初始化时，立刻从本地存储中拿到原始数据，解析后注入到路由实例中【吐血】
+  created() {
+    if (localStorage.menu) {
+      const menu = JSON.parse(localStorage.menu);
+      const _routes = generateRoutes(menu);
+      router.addRoutes(_routes);
+    }
+  }
 };
 </script>
 <style lang="scss">

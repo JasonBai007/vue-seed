@@ -50,7 +50,7 @@ if (debug) {
         {
           name: "权限测试",
           name_en: "Authority",
-          router: "/authority",
+          router: "/authority-test",
           icon: "el-icon-setting",
           children: []
         }

@@ -1,28 +1,23 @@
 import Vue from "vue";
 import Router from "vue-router";
+Vue.use(Router);
 
 // 登录
-const Signin = () => import("@/views/signin")
-
+const Signin = () => import ("@/views/signin")
 // 非登录页的包裹组件
-const Layout = () => import("@/views/layout")
-
+// const Layout = () => import("@/views/layout")
 // 项目信息
-const Notes = () => import("@/views/notes")
-
+// const Notes = () => import("@/views/notes")
 // 关于作者
-const About = () => import("@/views/about")
-
+// const About = () => import("@/views/about")
 // 天气预报
-const Weather = () => import("@/views/weather")
+// const Weather = () => import("@/views/weather")
 // 立方体
-const Cube = () => import("@/views/cube")
+// const Cube = () => import("@/views/cube")
 // 权限测试
-const AuthorityTest = () => import("@/views/authority-test")
+// const AuthorityTest = () => import("@/views/authority-test")
 // 404
-const Notfound = () => import("@/views/404")
-
-Vue.use(Router);
+// const Notfound = () =>  import ("@/views/404")
 
 const router = new Router({
   routes: [
@@ -31,72 +26,18 @@ const router = new Router({
       path: "/signin",
       name: "Signin",
       meta: {
-        requireAuth: false,
         title: "Auto Vue"
       },
       component: Signin
     },
-    // 然后就是嵌套路由了，也就是登陆后的各个页面
-    {
-      path: "/",
-      meta: {
-        requireAuth: true
-      },
-      component: Layout,
-      // redirect: '/notes', // 重定向到第一个子路由，否则只渲染Layout组件，这块儿使用时解除注释
-      redirect: "/signin", // 这里重定向到登录页面，是为了展示使用，实际用这个项目开发时，需要注释这行，解除上一行的注释
-      children: [
-        {
-          path: "notes",
-          meta: {
-            requireAuth: true,
-            title: "开发备忘"
-          },
-          component: Notes
-        },
-        {
-          path: "about",
-          meta: {
-            requireAuth: true,
-            title: "关于作者"
-          },
-          component: About
-        },
-        {
-          path: "weather",
-          meta: {
-            requireAuth: true,
-            title: "天气预报"
-          },
-          component: Weather
-        },
-        {
-          path: "cube",
-          meta: {
-            requireAuth: true,
-            title: "魔幻立方"
-          },
-          component: Cube
-        },
-        {
-          path: "authority",
-          meta: {
-            requireAuth: true,
-            title: "权限测试"
-          },
-          component: AuthorityTest
-        }
-      ]
-    },
     // 最后是404页面
-    {
-      path: "*",
-      meta: {
-        requireAuth: false,
-        title: "404"
-      },
-      component: Notfound
-    }
+    // {
+    //   path: "*",
+    //   meta: {
+    //     title: "404"
+    //   },
+    //   component: Notfound
+    // }
   ]
 });
 
