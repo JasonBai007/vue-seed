@@ -66,7 +66,7 @@ export default {
     this.initRythm();
     this.$bus.$on("stopMusic", () => {
       this.isMusicOn = false;
-      rythm.stop();
+      rythm.stop(true);
     });
   },
   methods: {
@@ -81,7 +81,7 @@ export default {
     toggleDance() {
       if (this.isMusicOn) {
         this.isMusicOn = false;
-        rythm.stop();
+        rythm.stop(true);
       } else {
         this.isMusicOn = true;
         rythm.start();
