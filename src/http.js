@@ -8,6 +8,36 @@ const http = axios.create({
   headers: {},
 })
 
+// 简单的封装GET方法
+http.get = (url, params) => {
+  return new Promise((resolve, reject) => {
+    http({
+      method: 'GET',
+      url,
+      params: params
+    }).then(res => {
+      resolve(res.data);
+    }).catch(err => {
+      reject(err.data)
+    })
+  })
+}
+
+// 简单的封装POST方法
+http.post = (url, data) => {
+  return new Promise((resolve, reject) => {
+    http({
+      method: 'POST',
+      url,
+      data: data
+    }).then(res => {
+      resolve(res.data);
+    }).catch(err => {
+      reject(err.data)
+    })
+  })
+}
+
 // 请求拦截器
 http.interceptors.request.use(config => {
     // 如果本地存储中有token字段， 就为所有请求加上Authorization请求头

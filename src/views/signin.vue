@@ -94,9 +94,9 @@ export default {
               password: this.form.password
             })
             .then(res => {
-              localStorage.userName = res.data.data.userName;
-              localStorage.userId = res.data.data.userId;
-              localStorage.token = res.data.data.token;
+              localStorage.userName = res.data.userName;
+              localStorage.userId = res.data.userId;
+              localStorage.token = res.data.token;
               this.getMenu();
             });
         } else {
@@ -107,7 +107,8 @@ export default {
     getMenu() {
       this.$http.get("getMenu").then(res => {
         // 提取菜单数组，交给本地存储
-        let menu = res.data.data.menu;
+        console.log(res)
+        let menu = res.data.menu;
         // 将原始数据进行本地存储
         localStorage.menu = JSON.stringify(menu);
         // 解析出路由配置表

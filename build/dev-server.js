@@ -65,7 +65,8 @@ app.use(staticPath, express.static('./static'))
 
 // var uri = 'http://localhost:' + port
 // 使用address模块，自动获取本机IP
-var uri = 'http://' + (address.ip() || 'localhost') +':' + port
+// 这里，我修改了，加上了/#/signin
+var uri = 'http://' + (address.ip() || 'localhost') +':' + port + '/#/signin'
 
 var _resolve
 var readyPromise = new Promise(resolve => {
