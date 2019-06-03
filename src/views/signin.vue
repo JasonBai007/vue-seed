@@ -1,6 +1,6 @@
 <template>
   <div class="bg">
-    <div class="login-wrap animated flipInY">
+    <div class="login-wrap animated fadeIn">
       <h3>Auto Vue</h3>
       <h3>{{$t('m.login.introduction')}}</h3>
       <el-form ref="form" :model="form" :rules="rules" label-width="0px">
@@ -158,11 +158,24 @@ export default {
 }
 .login-wrap {
   width: 330px;
-  border-radius: 5px;
+  // border-radius: 10px;
   padding: 20px;
   z-index: 3;
-  margin-right: -37%;
-  background: rgba(216, 220, 229, 0.5);
+  margin-right: -40%;
+  position: relative;
+  // background: rgba(70, 70, 70, 0.4);
+  &::after {
+    content: "";
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    top:0;
+    background: rgba(70, 70, 70, 0.5);
+    filter: blur(6px);
+    z-index: -1;
+  }
   .el-form-item {
     margin-bottom: 25px !important;
   }
