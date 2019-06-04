@@ -48,9 +48,9 @@ if (debug) {
           children: []
         },
         {
-          name: "权限测试",
-          name_en: "Authority",
-          router: "/authority-test",
+          name: "空白页面",
+          name_en: "Empty",
+          router: "/empty",
           icon: "el-icon-setting",
           children: []
         }

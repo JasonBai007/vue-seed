@@ -15,7 +15,7 @@
             <i class="fa fa-language" title="切换语言" @click="toggleLanguage"></i>
           </el-col>
           <el-col :span="2">
-            <i :class="[isFullscreen? 'fa-compress': 'fa-arrows-alt','fa ']" title="切换全屏" @click="toggleFullscreen"></i>
+            <i :class="[isFullscreen? 'fa-compress': 'fa-arrows-alt','fa ']" title="全屏" @click="toggleFullscreen"></i>
           </el-col>
           <el-col :span="2">
             <i class="fa fa-sign-out logout" title="退出" @click.prevent="logout"></i>

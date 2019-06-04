@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 .con-wrap {
   padding-left: 160px;
-  transition: all 0.5s;
+  transition: all 0.3s;
   h3 {
     margin-top: 0;
     color: #324157;
@@ -40,7 +40,7 @@ export default {
 }
 .con-wrap.conCollapse {
   padding-left: 64px;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 </style>
 

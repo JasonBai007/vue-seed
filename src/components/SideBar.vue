@@ -66,7 +66,7 @@ export default {
     this.initRythm();
     this.$bus.$on("stopMusic", () => {
       this.isMusicOn = false;
-      rythm.stop(true);
+      rythm.stop();
     });
   },
   methods: {
@@ -81,7 +81,7 @@ export default {
     toggleDance() {
       if (this.isMusicOn) {
         this.isMusicOn = false;
-        rythm.stop(true);
+        rythm.stop();
       } else {
         this.isMusicOn = true;
         rythm.start();
@@ -99,11 +99,11 @@ export default {
   top: 0;
   bottom: 0;
   z-index: 5;
-  transition: all 0.5s;
+  transition: all 0.3s;
   background: #3f4d67;
   &.collapsed {
     width: 64px;
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 
   /* 图标动画 */

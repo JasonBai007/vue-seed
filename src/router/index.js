@@ -4,20 +4,20 @@ Vue.use(Router);
 
 // 登录
 const Signin = () => import ("@/views/signin")
-  // 非登录页的包裹组件
-  // const Layout = () => import("@/views/layout")
-  // 项目信息
-  // const Notes = () => import("@/views/notes")
-  // 关于作者
-  // const About = () => import("@/views/about")
-  // 天气预报
-  // const Weather = () => import("@/views/weather")
-  // 立方体
-  // const Cube = () => import("@/views/cube")
-  // 权限测试
-  // const AuthorityTest = () => import("@/views/authority-test")
-  // 404
-  // const Notfound = () =>  import ("@/views/404")
+// 非登录页的包裹组件
+// const Layout = () => import("@/views/layout")
+// 项目信息
+// const Notes = () => import("@/views/notes")
+// 关于作者
+// const About = () => import("@/views/about")
+// 天气预报
+// const Weather = () => import("@/views/weather")
+// 立方体
+// const Cube = () => import("@/views/cube")
+// 权限测试
+// const Empty = () => import("@/views/empty")
+// 404
+// const Notfound = () =>  import ("@/views/404")
 
 const router = new Router({
   routes: [
