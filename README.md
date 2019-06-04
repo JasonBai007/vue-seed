@@ -38,6 +38,7 @@ http-server
 * Element-UI @ 2.8.2
 * Sass (怀念Less)
 * Animate.CSS
+* Typed.js
 * Font-Awesome
 * MockJS
 * Yarn
@@ -74,13 +75,15 @@ http-server
 * [Vue-loader使用指南](http://vue-loader.vuejs.org/en/)
 * [Vue-cli使用指南](http://vuejs-templates.github.io/webpack/)
 * [一位大神的vue项目搭建干货总结](https://linjinze999.github.io/vue-llplatform/)
+* [Vue 组件间通信六种方式（完整版）](https://juejin.im/post/5cde0b43f265da03867e78d3)
+* [7个有用的Vue开发技巧](https://juejin.im/post/5ce3b519f265da1bb31c0d5f)
+* [手摸手，带你用vue撸后台 系列五](https://juejin.im/post/5c92ff94f265da6128275a85)
 
 ## Folder Instructions
 | Name | Remark |
 | - | - |
 | .vscode | VScode的sftp插件配置文件，用于将编译后文件传输到服务器上 |
 | dist | 打包后的文件所在目录 |
-| screenshot | github上README页面上的预览图片，可删除 |
 
 ## Login Logic
 1. 请求登录接口，获取到token、用户ID等信息，保存到localStorage或Cookie里
@@ -99,6 +102,13 @@ http-server
 3. 如果已经登录过，本地有token，就待在首页，不用再登录一遍了
 
 ## Change Log
+2019-06-04
+* 优化目录结构
+* 美化404页面
+* 美化登录页
+* 添加空白页面
+* 实现动态路由添加
+
 2019-05-28
 * 单独引入echarts
 * 优化全局过滤器的写法
