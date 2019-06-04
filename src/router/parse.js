@@ -33,7 +33,7 @@ export default function generateRoutes(arr) {
     path: "/",
     redirect: "/signin",
     component: () =>
-      import ("@/views/layout"),
+      import ("@/layout"),
     children: _arr
   }, {
     path: "*",
