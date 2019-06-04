@@ -18,8 +18,8 @@ const About = () => import("@/views/about")
 const Weather = () => import("@/views/weather")
 // 立方体
 const Cube = () => import("@/views/cube")
-// 权限测试
-const AuthorityTest = () => import("@/views/authority-test")
+// 空白页面
+const Blank = () => import("@/views/blank")
 // 404
 const Notfound = () => import("@/views/404")
 
@@ -70,11 +70,11 @@ const router = new Router({
           component: Cube
         },
         {
-          path: "authority",
+          path: "blank",
           meta: {
-            title: "权限测试"
+            title: "空白页面"
           },
-          component: AuthorityTest
+          component: Blank
         }
       ]
     },

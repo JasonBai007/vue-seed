@@ -49,8 +49,8 @@ if (debug) {
         },
         {
           name: "空白页面",
-          name_en: "Empty",
-          router: "/empty",
+          name_en: "Blank",
+          router: "/blank",
           icon: "el-icon-setting",
           children: []
         }

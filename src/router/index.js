@@ -14,8 +14,8 @@ const Signin = () => import ("@/views/signin")
 // const Weather = () => import("@/views/weather")
 // 立方体
 // const Cube = () => import("@/views/cube")
-// 权限测试
-// const Empty = () => import("@/views/empty")
+// 空白页面
+// const Blank = () => import("@/views/blank")
 // 404
 // const Notfound = () =>  import ("@/views/404")
 
