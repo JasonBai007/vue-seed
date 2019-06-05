@@ -1,11 +1,11 @@
 <template>
   <div id="wrapper" ref="wrapper">
-    <div>前</div>
-    <div>后</div>
-    <div>上</div>
-    <div>下</div>
-    <div>左</div>
-    <div>右</div>
+    <div class="front" @click="showMsg(1)"></div>
+    <div class="end">后</div>
+    <div class="top" @click="showMsg(3)"></div>
+    <div class="bottom" @click="showMsg(4)"></div>
+    <div class="left" @click="showMsg(5)"></div>
+    <div class="right" @click="showMsg(6)"></div>
   </div>
 </template>
 <script>
@@ -21,6 +21,28 @@ export default {
     document.onmousedown = null;
   },
   methods: {
+    showMsg(flag) {
+      switch (flag) {
+        case 1:
+          this.$message.success('佛祖保佑，永无bug')
+          break;
+        case 3:
+          this.$message.warning('Say my name.')
+          break;
+        case 4:
+          this.$message.warning('别再打我了。。。')
+          break;
+        case 5:
+          this.$message.success('Better call Saul!')
+          break;
+        case 6:
+          this.$message.success("I'm Kim.")
+          break;
+
+        default:
+          break;
+      }
+    },
     listenMouseEvent() {
       document.onmousedown = ev => {
         //在包裹层上上摁下时，获取当前鼠标的位置
@@ -67,31 +89,37 @@ export default {
 
 #wrapper > div:nth-child(1) {
   transform: translateZ(100px);
-  background: rgba(0, 0, 255, 0.2);
+  // background: rgba(0, 0, 255, 0.2);
+  background: url("../../static/img/c1.jpg") center center / cover;
 }
 
 #wrapper > div:nth-child(2) {
   transform: translateZ(-100px);
-  background: rgba(0, 255, 0, 0.2);
+  user-select: none;
+  background: rgba(0, 255, 0, 0.6);
 }
 
 #wrapper > div:nth-child(3) {
   transform: rotateX(90deg) translateZ(100px);
-  background: rgba(255, 0, 0, 0.2);
+  // background: rgba(255, 0, 0, 0.2);
+  background: url("../../static/img/c2.jpg") center center / cover;
 }
 
 #wrapper > div:nth-child(4) {
   transform: rotateX(90deg) translateZ(-100px);
-  background: rgba(255, 255, 0, 0.2);
+  // background: rgba(255, 255, 0, 0.2);
+  background: url("../../static/img/c3.jpg") center center / cover;
 }
 
 #wrapper > div:nth-child(5) {
   transform: rotateY(90deg) translateZ(-100px);
-  background: rgba(0, 255, 255, 0.2);
+  // background: rgba(0, 255, 255, 0.2);
+  background: url("../../static/img/c4.jpg") center center / cover;
 }
 
 #wrapper > div:nth-child(6) {
   transform: rotateY(90deg) translateZ(100px);
-  background: rgba(255, 0, 255, 0.2);
+  // background: rgba(255, 0, 255, 0.2);
+  background: url("../../static/img/c5.jpg") center center / cover;
 }
 </style>

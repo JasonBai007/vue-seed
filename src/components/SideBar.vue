@@ -37,7 +37,7 @@
 
     <!-- 侧栏菜单下方图标 -->
     <div class="animated bounceInDown imgWrap">
-      <img src="../../static/img/little.gif" height="60px" class="gif rythm pulse3" @click="toggleDance">
+      <img src="../../static/img/player.gif" height="60px" class="gif rythm pulse3" @click="toggleDance">
     </div>
   </div>
 </template>
