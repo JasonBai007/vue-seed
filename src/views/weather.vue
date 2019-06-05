@@ -64,13 +64,9 @@ export default {
       this.loading = true;
       jsonp(
         "http://wthrcdn.etouch.cn/weather_mini?citykey=" + this.sel,
-        {
-          timeout: 5000
-        },
         (err, res) => {
           this.loading = false;
           if (err) {
-            this.loading = false;
             console.error(err.message);
           } else {
             let data = res.data;
