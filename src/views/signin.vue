@@ -2,7 +2,7 @@
   <div class="bg">
     <div class="login-wrap animated fadeIn">
       <h3>Auto Vue</h3>
-      <h3>{{$t('m.login.introduction')}}</h3>
+      <p>{{$t('m.login.introduction')}}</p>
       <el-form ref="form" :model="form" :rules="rules" label-width="0px">
         <el-form-item prop="name">
           <el-input :placeholder="$t('m.login.name_holder')" v-model="form.name"></el-input>
@@ -184,15 +184,22 @@ export default {
     color: #ebedef;
     margin-top: 0px;
     margin-bottom: 5px;
+    font-size: 22px;
     span {
       color: #20a0ff;
     }
+  }
+  p {
+    text-align: center;
+    color:#fff;
+    margin:0;
   }
   form {
     margin-top: 25px;
     .el-form-item {
       margin-bottom: 15px;
     }
+
   }
   a {
     text-decoration: none;

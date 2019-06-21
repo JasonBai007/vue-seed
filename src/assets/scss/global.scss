@@ -45,3 +45,11 @@ body {
 .el-menu .el-submenu__title i {
   color: #fff;
 }
+
+.bg form .el-input__inner {
+  background: transparent;
+  color:#fff;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  border-radius: 0;
+}

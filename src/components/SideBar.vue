@@ -22,7 +22,7 @@
 
           <!-- 二级菜单选项 -->
           <el-menu-item v-for="child in item.children" :index="child.router" :key="child.router">
-            <!-- <i :class="child.icon"></i> -->
+            <i class="fa fa-long-arrow-right"></i>
             <span slot="title">{{langType === 'en'? child.name_en: child.name}}</span>
           </el-menu-item>
         </el-submenu>
@@ -92,7 +92,7 @@ export default {
 </script>
 <style scoped lang="scss">
 #sidebar-wrap {
-  width: 160px;
+  width: 180px;
   height: 100%;
   position: fixed;
   left: 0;
@@ -101,6 +101,7 @@ export default {
   z-index: 5;
   transition: all 0.3s;
   background: #3f4d67;
+  box-shadow: 0px 0px 16px rgba(0,0,0,0.5);
   &.collapsed {
     width: 64px;
     transition: all 0.3s;
@@ -139,7 +140,10 @@ export default {
 .el-submenu .el-menu-item {
   padding: 0 20px;
   min-width: 160px;
-  padding-left: 53px !important;
+  padding-left: 26px !important;
+  i {
+    padding-right: 10px;
+  }
 }
 
 // 改变元素属性，要不动画效果不管用，是不是很厉害啊？哈哈哈

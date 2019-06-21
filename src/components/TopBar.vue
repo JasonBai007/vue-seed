@@ -18,7 +18,7 @@
             <i :class="[isFullscreen? 'fa-compress': 'fa-arrows-alt','fa ']" title="全屏" @click="toggleFullscreen"></i>
           </el-col>
           <el-col :span="2">
-            <i class="fa fa-sign-out logout" title="退出" @click.prevent="logout"></i>
+            <i class="fa fa-power-off logout" title="退出" @click.prevent="logout"></i>
           </el-col>
         </el-row>
       </el-col>
@@ -77,12 +77,13 @@ export default {
 <style scoped lang="scss">
 #topbar-wrap {
   overflow: hidden;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #efefef;
   background: #fff;
   color: #353d47;
   padding: 0 15px;
   z-index: 4;
   box-sizing: border-box;
+  // box-shadow: 0px 0px 20px rgba(0,0,0,0.03);
   a {
     line-height: 60px;
   }
@@ -99,9 +100,6 @@ export default {
   }
   .logout {
     text-decoration: none;
-    &:hover {
-      color: #1dc4e9;
-    }
   }
 }
 .row-right > div {

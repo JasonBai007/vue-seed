@@ -28,7 +28,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .con-wrap {
-  padding-left: 160px;
+  padding-left: 180px;
   transition: all 0.3s;
   h3 {
     margin-top: 0;
