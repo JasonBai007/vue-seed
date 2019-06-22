@@ -8,7 +8,7 @@ export const m = {
     remember: 'Remember Me',
     forget: 'Forgot Password',
     info: 'Please call 911',
-    button: 'Login'
+    button: 'Sign In'
   },
   topbar: {
     sayHi: 'Hi',

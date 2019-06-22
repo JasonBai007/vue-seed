@@ -8,7 +8,7 @@
     </h3>
 
     <!-- 循环生成侧栏菜单 -->
-    <el-menu background-color="#3f4d67" text-color="#fff" :default-active="$route.path" :unique-opened="true" :router="true" mode="vertical" :collapse="toggSiderBar">
+    <el-menu background-color="#fff" text-color="#333" :default-active="$route.path" :unique-opened="true" :router="true" mode="vertical" :collapse="toggSiderBar">
       <template v-for="item in menu">
 
         <!-- 多级菜单外壳 -->
@@ -100,7 +100,8 @@ export default {
   bottom: 0;
   z-index: 5;
   transition: all 0.3s;
-  background: #3f4d67;
+  background: #fff;
+  color: #6572b8;
   &.collapsed {
     width: 64px;
     transition: all 0.3s;
@@ -122,7 +123,6 @@ export default {
     }
   }
   .logo {
-    color: #fff;
     text-align: center;
     padding: 18px 0;
     margin: 0;
@@ -133,7 +133,7 @@ export default {
 
 .el-menu {
   height: 100%;
-  box-shadow: 0px 15px 15px rgba(0,0,0,0.6);
+  box-shadow: 0px 20px 20px rgba(0,0,0,0.15);
 }
 
 // 美化左侧导航的留白

@@ -77,15 +77,17 @@ export default {
 <style scoped lang="scss">
 #topbar-wrap {
   overflow: hidden;
-  border-bottom: 1px solid #efefef;
-  background: #fff;
-  color: #353d47;
+  // border-bottom: 1px solid #efefef;
+  background: #8c99e0;
+  color: #fff;
   padding: 0 15px;
   z-index: 4;
   box-sizing: border-box;
-  // box-shadow: 0px 0px 20px rgba(0,0,0,0.03);
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
   a {
     line-height: 60px;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
   i {
     font-size: 20px;

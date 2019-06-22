@@ -5,7 +5,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background: #f4f7fa;
+  background: #f4f6f9;
   // background: #f3f3f3;
   #app {
     height: 100%;
@@ -15,7 +15,7 @@ body {
 // 宽度还得自己设定，坑死
 .el-menu {
   width: 100%;
-  border-right: none!important;
+  // border-right: none!important;
 }
 .el-menu-item [class^='el-icon-'] {
   vertical-align: middle;
@@ -35,16 +35,16 @@ body {
   color: #ff4949;
   margin-right: 4px;
 }
-#sidebar-wrap ul ul li {
-  background: rgba(40, 52, 70, 1) !important;
-  &:hover {
-    background: #48576a !important;
-  }
-}
+// #sidebar-wrap ul ul li {
+//   background: rgba(40, 52, 70, 1) !important;
+//   &:hover {
+//     background: #48576a !important;
+//   }
+// }
 
-.el-menu .el-submenu__title i {
-  color: #fff;
-}
+// .el-menu .el-submenu__title i {
+//   color: #fff;
+// }
 
 .bg form .el-input__inner {
   background: transparent;

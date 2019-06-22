@@ -21,18 +21,12 @@
         </el-form-item>
       </el-form>
     </div>
-
-    <!-- 粒子漂浮物 -->
-    <vue-particles color="#fff" :particleOpacity="0.7" :particlesNumber="30" shapeType="star" :particleSize="5" linesColor="#fff" :linesWidth="2" :lineLinked="true" :lineOpacity="0.4" :linesDistance="150" :moveSpeed="3" :hoverEffect="true" hoverMode="grab" :clickEffect="true" clickMode="push"></vue-particles>
   </div>
 </template>
 <script>
 // 引入粒子特效插件并注册
-import Vue from "vue";
 import router from "../router/index";
 import generateRoutes from "../router/parse";
-import VueParticles from "vue-particles";
-Vue.use(VueParticles);
 export default {
   name: "signin",
   data() {
@@ -107,7 +101,7 @@ export default {
     getMenu() {
       this.$http.get("getMenu").then(res => {
         // 提取菜单数组，交给本地存储
-        console.log(res)
+        console.log(res);
         let menu = res.data.menu;
         // 将原始数据进行本地存储
         localStorage.menu = JSON.stringify(menu);
@@ -139,30 +133,20 @@ export default {
 </script>
 <style scoped lang="scss">
 .bg {
-  position: relative;
   overflow: hidden;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../../static/img/bg.jpg");
-  background-position: -20% 10%;
-  background-size: contain;
-  #particles-js {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  background-image: url("../../static/img/bg-light.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 .login-wrap {
   width: 310px;
   padding: 30px;
   z-index: 3;
-  margin-right: -40%;
   position: relative;
-  background: rgba(50, 50, 50, 0.5);
   .el-form-item {
     margin-bottom: 25px !important;
   }
@@ -172,21 +156,17 @@ export default {
     margin-top: 0px;
     margin-bottom: 5px;
     font-size: 22px;
-    span {
-      color: #20a0ff;
-    }
   }
   p {
     text-align: center;
-    color:#fff;
-    margin:0;
+    color: #fff;
+    margin: 0;
   }
   form {
     margin-top: 25px;
     .el-form-item {
       margin-bottom: 15px;
     }
-
   }
   a {
     text-decoration: none;
@@ -195,9 +175,8 @@ export default {
   button {
     width: 100%;
     font-weight: 600;
-    border:none;
+    border: none;
     border-radius: 0;
-    background-color: #34495e;
   }
 }
 </style>
