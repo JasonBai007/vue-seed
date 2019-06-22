@@ -15,10 +15,15 @@ body {
 // 宽度还得自己设定，坑死
 .el-menu {
   width: 100%;
+  border: none !important;
 }
 .el-menu-item [class^='el-icon-'] {
   vertical-align: middle;
   color: #546e7a;
+}
+.el-menu-item:hover {
+  background-color:#8c99e0 !important;
+  color:#fff !important;
 }
 .el-submenu [class^='el-icon-'],
 .el-submenu__title i {
@@ -44,7 +49,7 @@ body {
   width: 2px;
   height: 21px;
   display: block;
-  margin-left: -20px;
+  margin-left: -21px;
   content: '';
 }
 

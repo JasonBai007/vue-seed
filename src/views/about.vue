@@ -1,6 +1,5 @@
 <template>
   <div>
-    关于作者
     <qr-card></qr-card>
   </div>
 </template>

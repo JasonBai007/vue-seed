@@ -44,13 +44,15 @@ export default {
   width: 300px;
   margin: 50px auto;
   background: #fff;
-  box-shadow: 4px 4px 15px #aaa;
+  box-shadow: 0px 0px 10px #ccc;
+  border-radius: 5px;
   /*父元素设为3d*/
   transform-style: preserve-3d;
   /*设置父元素得景深*/
   transform: perspective(1000px);
+  overflow: hidden;
   img {
-    width: 100%;
+    width: 101%;
   }
 }
 </style>
