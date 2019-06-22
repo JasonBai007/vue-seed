@@ -5,10 +5,10 @@
       <p>{{$t('m.login.introduction')}}</p>
       <el-form ref="form" :model="form" :rules="rules" label-width="0px">
         <el-form-item prop="name">
-          <el-input :placeholder="$t('m.login.name_holder')" v-model="form.name"></el-input>
+          <el-input :placeholder="$t('m.login.name_holder')" v-model="form.name" clearable></el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input :placeholder="$t('m.login.password_holder')" v-model="form.password" type="password"></el-input>
+          <el-input :placeholder="$t('m.login.password_holder')" v-model="form.password" type="password" clearable></el-input>
         </el-form-item>
         <el-form-item>
           <el-row type="flex" justify="space-between">
@@ -157,25 +157,12 @@ export default {
   }
 }
 .login-wrap {
-  width: 330px;
-  // border-radius: 10px;
-  padding: 20px;
+  width: 310px;
+  padding: 30px;
   z-index: 3;
   margin-right: -40%;
   position: relative;
-  // background: rgba(70, 70, 70, 0.4);
-  &::after {
-    content: "";
-    width:100%;
-    height:100%;
-    border-radius: 10px;
-    position: absolute;
-    left:0;
-    top:0;
-    background: rgba(70, 70, 70, 0.5);
-    filter: blur(6px);
-    z-index: -1;
-  }
+  background: rgba(50, 50, 50, 0.5);
   .el-form-item {
     margin-bottom: 25px !important;
   }
@@ -208,6 +195,9 @@ export default {
   button {
     width: 100%;
     font-weight: 600;
+    border:none;
+    border-radius: 0;
+    background-color: #34495e;
   }
 }
 </style>

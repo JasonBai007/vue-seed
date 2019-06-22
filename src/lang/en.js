@@ -1,13 +1,13 @@
 export const m = {
   login: {
     introduction: 'welcome to my system',
-    name_holder: 'username',
-    password_holder: 'password',
+    name_holder: 'Username',
+    password_holder: 'Password',
     name_tip: 'Please enter the username',
     password_tip: 'Please enter the password',
     remember: 'Remember Me',
     forget: 'Forgot Password',
-    info: 'please call 911',
+    info: 'Please call 911',
     button: 'Login'
   },
   topbar: {
