@@ -2,8 +2,9 @@
   <div>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <i class="el-icon-edit"></i>&nbsp;&nbsp;
-        <span>Vue开发备忘录</span>
+        <span>
+          <b>Vue</b> 开发备忘录
+        </span>
       </div>
       <div class="text item">
         <ol>
@@ -43,6 +44,13 @@ ol {
   margin-top: 0;
   li {
     line-height: 30px;
+  }
+}
+.box-card {
+  span {
+    b {
+      color: #6572b8;
+    }
   }
 }
 </style>

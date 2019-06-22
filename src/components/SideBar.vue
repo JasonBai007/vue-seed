@@ -101,7 +101,7 @@ export default {
   z-index: 5;
   transition: all 0.3s;
   background: #fff;
-  color: #6572b8;
+  color: #546e7a;
   &.collapsed {
     width: 64px;
     transition: all 0.3s;
@@ -132,7 +132,7 @@ export default {
 }
 
 .el-menu {
-  height: 100%;
+  height: 100vh;
   box-shadow: 0px 20px 20px rgba(0,0,0,0.15);
 }
 

@@ -15,36 +15,20 @@ body {
 // 宽度还得自己设定，坑死
 .el-menu {
   width: 100%;
-  // border-right: none!important;
 }
 .el-menu-item [class^='el-icon-'] {
   vertical-align: middle;
-  color: #ddd;
+  color: #546e7a;
 }
-.el-submenu [class^='el-icon-'] {
-  color: #ddd;
-}
+.el-submenu [class^='el-icon-'],
 .el-submenu__title i {
-  vertical-align: middle;
-  color: #ddd;
+  color: #546e7a;
+  font-weight: bold;
 }
 
-// 自定义必填项的左上角红色星号
-.required-self label.el-form-item__label:before {
-  content: '*';
-  color: #ff4949;
-  margin-right: 4px;
+.el-menu-item.is-active {
+  font-weight: bold;
 }
-// #sidebar-wrap ul ul li {
-//   background: rgba(40, 52, 70, 1) !important;
-//   &:hover {
-//     background: #48576a !important;
-//   }
-// }
-
-// .el-menu .el-submenu__title i {
-//   color: #fff;
-// }
 
 .bg form .el-input__inner {
   background: transparent;
@@ -52,4 +36,21 @@ body {
   border: none;
   border-bottom: 1px solid #aaa;
   border-radius: 0;
+}
+
+.el-card__header::before {
+  background: #6572b8;
+  position: absolute;
+  width: 2px;
+  height: 21px;
+  display: block;
+  margin-left: -20px;
+  content: '';
+}
+
+// 自定义必填项的左上角红色星号
+.required-self label.el-form-item__label:before {
+  content: '*';
+  color: #ff4949;
+  margin-right: 4px;
 }
