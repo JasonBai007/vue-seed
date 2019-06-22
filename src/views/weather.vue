@@ -165,6 +165,7 @@ export default {
   margin-bottom: 20px;
   .sel-label {
     line-height: 36px;
+    color: #fff;
   }
 }
 

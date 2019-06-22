@@ -77,13 +77,16 @@ export default {
 <style scoped lang="scss">
 #topbar-wrap {
   overflow: hidden;
-  // border-bottom: 1px solid #efefef;
+  position: fixed;
+  right: 0;
+  width: calc(100% - 180px);
   background: #8c99e0;
   color: #fff;
-  padding: 0 15px;
+  padding: 0 26px 0 15px;
   z-index: 4;
   box-sizing: border-box;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  transition: all 0.1s;
   a {
     line-height: 60px;
     font-weight: bold;
@@ -106,5 +109,8 @@ export default {
 }
 .row-right > div {
   text-align: center;
+}
+#topbar-wrap.topCollapsed {
+  width: calc(100% - 64px);
 }
 </style>

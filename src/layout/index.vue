@@ -35,11 +35,13 @@ export default {
 .con-wrap {
   padding-left: 180px;
   transition: all 0.3s;
+  overflow: hidden;
   h2 {
     color: #fff;
   }
   .page-component-wrap {
     position: relative;
+    margin-top: 60px;
     padding: 0px 25px 20px;
     overflow: hidden;
     &::before {
