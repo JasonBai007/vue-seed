@@ -1,8 +1,11 @@
 <template>
   <div class="bg">
     <div class="login-wrap animated fadeIn">
-      <h3>Auto Vue</h3>
-      <p>{{$t('m.login.introduction')}}</p>
+      <h3>
+        <span>A</span>uto
+        <span>V</span>ue
+      </h3>
+      <!-- <p>{{$t('m.login.introduction')}}</p> -->
       <el-form ref="form" :model="form" :rules="rules" label-width="0px">
         <el-form-item prop="name">
           <el-input :placeholder="$t('m.login.name_holder')" v-model="form.name" clearable></el-input>
@@ -141,6 +144,17 @@ export default {
   background-image: url("../../static/img/bg-light.jpg");
   background-size: cover;
   background-position: center center;
+  &::before {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+  }
 }
 .login-wrap {
   width: 310px;
@@ -154,8 +168,11 @@ export default {
     text-align: center;
     color: #ebedef;
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-size: 22px;
+    span {
+      color: #8c99e0;
+    }
   }
   p {
     text-align: center;
