@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrap">
     Now,
     <span class="type"></span>
   </div>
@@ -26,5 +26,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.wrap {
+  background: #fff;
+  min-height: 120px;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
 </style>
 
