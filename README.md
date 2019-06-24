@@ -4,6 +4,10 @@
 ![author](https://img.shields.io/badge/author-jasonbai-orange.svg)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
+## Theme
+1. [dark-version](http://lubanseven.gitee.io/dark-version) ( master )
+2. [light-version](http://lubanseven.gitee.io/show/#/signin)( light-version )
+
 ## Build Setup
 
 ``` bash
