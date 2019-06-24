@@ -4,9 +4,15 @@
 ![author](https://img.shields.io/badge/author-jasonbai-orange.svg)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
+## Theme
+light-version
+
 ## Build Setup
 
 ``` bash
+# switch to light-version branch
+git checkout light-version
+
 # install dependencies
 yarn install
 
@@ -102,6 +108,11 @@ http-server
 3. 如果已经登录过，本地有token，就待在首页，不用再登录一遍了
 
 ## Change Log
+2019-06-23
+* 美化立方体
+* 更改整体设计风格
+* 美化登录页
+
 2019-06-04
 * 优化目录结构
 * 美化404页面
