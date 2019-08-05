@@ -7,6 +7,7 @@
 ## Theme
 1. [dark-version](http://lubanseven.gitee.io/dark-version/#/signin) ( master )
 2. [light-version](http://lubanseven.gitee.io/show/#/signin)( light-version )
+3. [color-version](http://lubanseven.gitee.io/color-version/#/signin)( color-version )
 
 ## Build Setup
 
