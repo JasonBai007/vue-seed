@@ -65,7 +65,9 @@ module.exports = {
   plugins: [
     //生成仅包含颜色的替换样式（主题色等）
     new ThemeColorReplacer({
-      fileName: 'css/theme-colors.[contenthash:8].css',
+      // 官网的文件名，会导致编译后的文件名不对：fileName: 'css/theme-colors-[contenthash:8].css'
+      // 不要添加 [contenthash:8]
+      fileName: 'css/theme-colors.css',
       matchColors: [...forElementUI.getElementUISeries('#bb162b')], //需要替换的颜色数组，里面都是目标颜色
       changeSelector: forElementUI.changeSelector,
     })
