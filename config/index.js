@@ -8,9 +8,7 @@ module.exports = {
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
         // 上线资源路径配置
-        // assetsPublicPath: 'http://xx.xx.xx.xx/',
-        // 本地开发资源路径
-        assetsPublicPath: '/color-version/',
+        assetsPublicPath: '',
         productionSourceMap: false,
         // Gzip off by default as many popular static hosts such as
         // Surge or Netlify already gzip all static assets for you.
