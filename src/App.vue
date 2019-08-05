@@ -20,8 +20,54 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-// 这里是坑啊，文件路径中好像不能用@符号
-// 引入全局样式
-@import "./assets/scss/global.scss";
+<style>
+/* 注释“方正兰亭黑简体” */
+/* @font-face {
+  font-family: fzlthjt;
+  src: url(../static/fonts/fzlthjt.ttf);
+} */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+}
+body #app {
+  height: 100%;
+}
+
+/* 覆盖左侧导航样式 */
+.el-menu {
+  width: 100%;
+  border-right: none !important;
+}
+
+.el-menu-item [class^="el-icon-"] {
+  color: #333;
+}
+
+.el-menu .el-submenu__title i {
+  color: #333;
+}
+.el-menu-item.is-active {
+  background: #f8e8ea;
+  border-right: 3px solid #bb162b;
+}
+.el-submenu.is-opened .el-menu {
+  background: #fafafa;
+}
+
+/* 登录页覆盖账号输入框样式 */
+.bg form .el-input__inner {
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  border-radius: 0;
+}
 </style>

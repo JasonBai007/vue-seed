@@ -1,12 +1,17 @@
 /* 饿了么白垩纪主题颜色变量文件路径：
 node_modules\element-ui\packages\theme-chalk\src\common\var.scss */
 /* 改变主题色变量 */
-$--color-primary: #1dc4e9;
+$--color-primary: #bb162b;
 $--card-border-radius: 0px !default;
 
 $--box-shadow-base: none !default;
 $--box-shadow-dark: none !default;
 $--box-shadow-light: none !default;
+
+/// borderRadius|1|Radius|0
+$--border-radius-base: 0 !default;
+/// borderRadius|1|Radius|0
+$--border-radius-small: 0 !default;
 
 /* 改变 icon 字体路径变量，必需 */
 $--font-path: "~element-ui/lib/theme-chalk/fonts";

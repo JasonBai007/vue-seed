@@ -1,6 +1,6 @@
 export const m = {
   login: {
-    introduction: 'welcome to my system',
+    introduction: 'Sales Insight Platform',
     name_holder: 'Username',
     password_holder: 'Password',
     name_tip: 'Please enter the username',
@@ -13,13 +13,5 @@ export const m = {
   topbar: {
     sayHi: 'Hi',
     logout: 'Logout'
-  },
-  menu: {
-    project: 'Projects',
-    notes: 'Notes',
-    about: 'About',
-    weather: 'Weather',
-    cube: 'Cube',
-    authority: 'Authority'
   }
 }

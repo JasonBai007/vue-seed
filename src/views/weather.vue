@@ -13,7 +13,7 @@
         <el-card class="box-card">{{'实时温度：' + (cityData.wendu || 'XX') + '℃'}}</el-card>
       </el-col>
       <el-col :span="4">
-        <el-card class="box-card">{{'空气质量：' + ( cityData.aqi || '暂无' )}}</el-card>
+        <el-card class="box-card">{{'气象状况：' + ( cityData.forecast[0].type || '暂无' )}}</el-card>
       </el-col>
       <el-col :span="16">
         <el-card class="box-card">{{cityData.ganmao || '暂无提示'}}</el-card>
@@ -50,7 +50,15 @@ export default {
   data() {
     return {
       loading: true,
-      cityData: {},
+      cityData: {
+        wendu: "",
+        forecast: [
+          {
+            type: ""
+          }
+        ],
+        ganmao: ""
+      },
       options: arr,
       sel: "101010100",
       chartData: {}
@@ -80,13 +88,12 @@ export default {
     renderChart(data) {
       let opts = {
         title: {
-          text: "近五天气温趋势",
+          text: "近五天气温走势",
           x: "center",
           textStyle: {
             color: "#666"
           }
         },
-        color: this.$store.state.common.chartTheme,
         grid: {
           top: "15%",
           left: "1%",
@@ -164,7 +171,7 @@ export default {
 .sel-row {
   margin-bottom: 20px;
   .sel-label {
-    line-height: 36px;
+    line-height: 40px;
   }
 }
 

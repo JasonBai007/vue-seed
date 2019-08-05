@@ -1,5 +1,8 @@
 import axios from 'axios'
 import router from './router'
+import {
+  Message
+} from 'element-ui';
 
 // 构建请求对象
 const http = axios.create({
@@ -16,7 +19,12 @@ http.get = (url, params) => {
       url,
       params: params
     }).then(res => {
-      resolve(res.data);
+      if (res.data.code !== 0) {
+        Message.warning(res.data.msg)
+        reject()
+      } else {
+        resolve(res.data.data);
+      }
     }).catch(err => {
       reject(err.data)
     })
@@ -31,7 +39,12 @@ http.post = (url, data) => {
       url,
       data: data
     }).then(res => {
-      resolve(res.data);
+      if (res.data.code !== 0) {
+        Message.warning(res.data.msg)
+        reject()
+      } else {
+        resolve(res.data.data);
+      }
     }).catch(err => {
       reject(err.data)
     })

@@ -2,6 +2,8 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+const ThemeColorReplacer = require('webpack-theme-color-replacer')
+const forElementUI = require('webpack-theme-color-replacer/forElementUI')
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -29,8 +31,7 @@ module.exports = {
       test: /\.vue$/,
       loader: 'vue-loader',
       options: vueLoaderConfig
-    },
-    {
+    }, {
       test: /\.js$/,
       loader: 'babel-loader',
       include: [
@@ -38,31 +39,35 @@ module.exports = {
         resolve('test'),
         resolve('node_modules/vue-particles')
       ]
-    },
-    {
+    }, {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       loader: 'url-loader',
       query: {
         limit: 10000,
         name: utils.assetsPath('img/[name].[ext]')
       }
-    },
-    {
+    }, {
       test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
       loader: 'url-loader',
       query: {
         limit: 10000,
         name: utils.assetsPath('fonts/[name].[ext]')
       }
-    },
-    {
+    }, {
       test: /\.mp3(\?.*)?$/,
       loader: 'url-loader',
       query: {
         limit: 10000,
         name: utils.assetsPath('audio/[name].[ext]')
       }
-    }
-    ]
-  }
+    }]
+  },
+  plugins: [
+    //生成仅包含颜色的替换样式（主题色等）
+    new ThemeColorReplacer({
+      fileName: 'css/theme-colors.[contenthash:8].css',
+      matchColors: [...forElementUI.getElementUISeries('#bb162b')], //需要替换的颜色数组，里面都是目标颜色
+      changeSelector: forElementUI.changeSelector,
+    })
+  ]
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="bg">
     <div class="login-wrap animated fadeIn">
-      <h3>Auto Vue</h3>
+      <h3>S I P</h3>
       <p>{{$t('m.login.introduction')}}</p>
       <el-form ref="form" :model="form" :rules="rules" label-width="0px">
         <el-form-item prop="name">
@@ -10,29 +10,23 @@
         <el-form-item prop="password">
           <el-input :placeholder="$t('m.login.password_holder')" v-model="form.password" type="password" clearable></el-input>
         </el-form-item>
-        <el-form-item>
+        <!-- <el-form-item>
           <el-row type="flex" justify="space-between">
             <el-checkbox v-model="isMemery" style="color:#eee">{{$t('m.login.remember')}}</el-checkbox>
             <a href @click.prevent="openMsg" style="color:#eee">{{$t('m.login.forget')}}</a>
           </el-row>
-        </el-form-item>
+        </el-form-item>-->
         <el-form-item>
           <el-button type="primary" @click="Login('form')">{{$t('m.login.button')}}</el-button>
         </el-form-item>
       </el-form>
     </div>
-
-    <!-- 粒子漂浮物 -->
-    <vue-particles color="#fff" :particleOpacity="0.7" :particlesNumber="30" shapeType="star" :particleSize="5" linesColor="#fff" :linesWidth="2" :lineLinked="true" :lineOpacity="0.4" :linesDistance="150" :moveSpeed="3" :hoverEffect="true" hoverMode="grab" :clickEffect="true" clickMode="push"></vue-particles>
   </div>
 </template>
 <script>
-// 引入粒子特效插件并注册
 import Vue from "vue";
 import router from "../router/index";
 import generateRoutes from "../router/parse";
-import VueParticles from "vue-particles";
-Vue.use(VueParticles);
 export default {
   name: "signin",
   data() {
@@ -94,9 +88,9 @@ export default {
               password: this.form.password
             })
             .then(res => {
-              localStorage.userName = res.data.userName;
-              localStorage.userId = res.data.userId;
-              localStorage.token = res.data.token;
+              localStorage.userName = res.userName;
+              localStorage.userId = res.userId;
+              localStorage.token = res.token;
               this.getMenu();
             });
         } else {
@@ -107,8 +101,8 @@ export default {
     getMenu() {
       this.$http.get("getMenu").then(res => {
         // 提取菜单数组，交给本地存储
-        console.log(res)
-        let menu = res.data.menu;
+        console.log(res);
+        let menu = res.menu;
         // 将原始数据进行本地存储
         localStorage.menu = JSON.stringify(menu);
         // 解析出路由配置表
@@ -116,7 +110,7 @@ export default {
         // 动态加载路由配置表
         router.addRoutes(_routes);
         // 跳转到首页
-        this.$router.push("/notes");
+        this.$router.push("/dashboard");
       });
     },
     openMsg() {
@@ -148,21 +142,21 @@ export default {
   background-image: url("../../static/img/bg.jpg");
   background-position: -20% 10%;
   background-size: contain;
-  #particles-js {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  // #particles-js {
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  // }
 }
 .login-wrap {
   width: 310px;
   padding: 30px;
   z-index: 3;
-  margin-right: -40%;
+  margin-right: -50%;
   position: relative;
-  background: rgba(50, 50, 50, 0.5);
+  background: rgba(100, 100, 100, 0.5);
   .el-form-item {
     margin-bottom: 25px !important;
   }
@@ -178,15 +172,15 @@ export default {
   }
   p {
     text-align: center;
-    color:#fff;
-    margin:0;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
   }
   form {
     margin-top: 25px;
     .el-form-item {
       margin-bottom: 15px;
     }
-
   }
   a {
     text-decoration: none;
@@ -195,9 +189,10 @@ export default {
   button {
     width: 100%;
     font-weight: 600;
-    border:none;
+    border: none;
     border-radius: 0;
-    background-color: #34495e;
+    margin-top: 20px;
+    background-color: #bb162b;
   }
 }
 </style>

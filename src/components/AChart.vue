@@ -44,6 +44,10 @@ export default {
     // 根据唯一的ID，初始化一个图表实例
     myChart() {
       return echarts.init(document.getElementById(this.chartId));
+    },
+    // 图表主题色
+    colorArr() {
+      return this.$store.state.common.chartTheme;
     }
   },
   mounted() {
@@ -60,7 +64,13 @@ export default {
     renderChart() {
       // 每次渲染前，得先清除掉上一次渲染的配置数据
       this.myChart.clear();
-      this.myChart.setOption(this.myChartData);
+      let _options = Object.assign(
+        {
+          color: this.colorArr
+        },
+        this.myChartData
+      );
+      this.myChart.setOption(_options);
     }
   },
   watch: {
@@ -71,6 +81,9 @@ export default {
         this.renderChart();
       },
       deep: true
+    },
+    colorArr(n, o) {
+      this.renderChart();
     }
   }
 };

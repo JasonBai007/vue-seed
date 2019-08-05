@@ -10,7 +10,8 @@ export default function generateRoutes(arr) {
         _arr.push({
           path: _obj.router,
           meta: {
-            title: _obj.name
+            title: _obj.name,
+            bread: obj.name + '&' + _obj.name
           },
           component: () =>
             import (`@/views${_obj.router}`)
@@ -21,24 +22,27 @@ export default function generateRoutes(arr) {
       _arr.push({
         path: obj.router,
         meta: {
-          title: obj.name
+          title: obj.name,
+          bread: obj.name
         },
         component: () =>
           import (`@/views${obj.router}`)
       })
     }
   })
-  // 构建多级路由+404路由配置表
+  console.log(_arr)
+    // 构建多级路由+404路由配置表
   return [{
     path: "/",
-    redirect: "/signin",
+    redirect: "/dashboard",
     component: () =>
       import ("@/layout"),
     children: _arr
   }, {
     path: "*",
     meta: {
-      title: "404"
+      title: "404",
+      bread: "404"
     },
     component: () =>
       import ("@/views/404")

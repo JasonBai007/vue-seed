@@ -47,10 +47,9 @@ export default {
   right: 20px;
   bottom: 20px;
   i {
-    font-size: 30px;
-    color: #324157;
+    font-size: 36px;
+    color: #bb162b;
     &:hover {
-      color: #20a0ff;
       cursor: pointer;
     }
   }
