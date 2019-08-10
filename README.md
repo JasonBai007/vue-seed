@@ -1,12 +1,10 @@
-<h1 align="center">Vue-Seed</h1>
+# Vue-Seed
 
-<div align="center">
 An out-of-box UI solution for enterprise applications as a Vue boilerplate.
 
 ![author](https://img.shields.io/badge/author-jasonbai-orange.svg)
 ![Prs](https://img.shields.io/badge/Prs-welcome-brightgreen.svg)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
-</div>
 
 ## Themes Preview
 1. [dark-version](http://lubanseven.gitee.io/dark-version/#/signin)  ( Branch: master )
