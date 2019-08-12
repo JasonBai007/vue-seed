@@ -20,13 +20,7 @@ export default {
   }
 };
 </script>
-<style>
-/* 注释“方正兰亭黑简体” */
-/* @font-face {
-  font-family: fzlthjt;
-  src: url(../static/fonts/fzlthjt.ttf);
-} */
-
+<style lang="scss">
 html,
 body {
   height: 100%;
