@@ -20,7 +20,11 @@ export default {
   }
 };
 </script>
+
 <style lang="scss">
+// 此处的lang必须是scss，
+// 如果是普通的css的话，最开始，下方全局的样式将不会被换肤插件抽离出来，修改后刷新页面才可以。
+// 所以，只能改成scss了，但是是全局的
 html,
 body {
   height: 100%;
