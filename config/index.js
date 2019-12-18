@@ -8,7 +8,7 @@ module.exports = {
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
         // 上线资源路径配置
-        // assetsPublicPath: 'http://xx.xx.xx.xx/',
+        assetsPublicPath: '/show/',
         // 本地开发资源路径
         assetsPublicPath: '',
         productionSourceMap: false,
