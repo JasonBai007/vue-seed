@@ -102,6 +102,7 @@ export default {
   transition: all 0.3s;
   background: #fff;
   color: #546e7a;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
   &.collapsed {
     width: 64px;
     transition: all 0.3s;
@@ -132,8 +133,7 @@ export default {
 }
 
 .el-menu {
-  height: 100vh;
-  box-shadow: 0px 20px 20px rgba(0,0,0,0.15);
+  height: 100vh;  
 }
 
 // 美化左侧导航的留白
