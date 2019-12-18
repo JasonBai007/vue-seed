@@ -27,7 +27,7 @@ An out-of-box UI solution for enterprise applications as a Vue boilerplate.
 
 ``` bash
 # install dependencies
-yarn install
+npm install
 
 # serve with hot reload at localhost:1024
 yarn run dev

@@ -4,7 +4,7 @@
   <div id="topbar-wrap" :class="{ topCollapsed: isCollapse }">
     <el-row type="flex" justify="space-between">
       <el-col :span="5">
-        <i :class="[isCollapse ? 'icon-spread': 'icon-recovery','iconfont']" @click="toggleSiderBar"></i>
+        <i class="iconfont icon-spread" :style="iconStyle" @click="toggleSiderBar"></i>
       </el-col>
       <el-col :span="12">
         <el-row type="flex" class="row-right" justify="end" style="margin-right:-15px">
@@ -15,7 +15,11 @@
             <i class="fa fa-language" title="切换语言" @click="toggleLanguage"></i>
           </el-col>
           <el-col :span="2">
-            <i :class="[isFullscreen? 'fa-compress': 'fa-arrows-alt','fa ']" title="全屏" @click="toggleFullscreen"></i>
+            <i
+              :class="[isFullscreen? 'fa-compress': 'fa-arrows-alt','fa ']"
+              title="全屏"
+              @click="toggleFullscreen"
+            ></i>
           </el-col>
           <el-col :span="2">
             <i class="fa fa-power-off logout" title="退出" @click.prevent="logout"></i>
@@ -39,6 +43,13 @@ export default {
   computed: {
     isCollapse() {
       return this.$store.state.common.isCollapse;
+    },
+    iconStyle() {
+      return {
+        display: "block",
+        width: "20px",
+        transform: this.isCollapse ? "rotate(0deg)" : "rotate(180deg)"
+      };
     }
   },
   methods: {
