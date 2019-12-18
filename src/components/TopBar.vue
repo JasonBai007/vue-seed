@@ -4,7 +4,7 @@
   <div id="topbar-wrap" :class="{ topCollapsed: isCollapse }">
     <el-row type="flex" justify="space-between">
       <el-col :span="6">
-        <i :class="[isCollapse ? 'icon-spread': 'icon-recovery','iconfont toggle-btn']" @click="toggleSiderBar"></i>
+        <i class="iconfont icon-spread toggle-btn" :style="iconStyle"  @click="toggleSiderBar"></i>
         <campaign-select></campaign-select>
       </el-col>
       <el-col :span="12">
@@ -46,6 +46,11 @@ export default {
   computed: {
     isCollapse() {
       return this.$store.state.common.isCollapse;
+    },
+    iconStyle() {
+      return {
+        transform: this.isCollapse ? "rotate(0deg)" : "rotate(180deg)"
+      };
     }
   },
   mounted() {},
