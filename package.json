@@ -10,7 +10,7 @@
     "analysis": "npm run build --report"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "element-ui": "^2.8.2",
     "font-awesome": "^4.7.0",
